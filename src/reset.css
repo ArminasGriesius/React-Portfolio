@@ -1,0 +1,126 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-size: cover;
+  background-color: #1a1a1a;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  margin: 0;
+}
+
+li {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* common rules */
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  /* apridboti tik maximalu ploti */
+  max-width: 1440px;
+  /* skaiciuoti parastes automatiskai vienodai is kaires ir is desines */
+  margin: 0 auto;
+}
+
+input,
+textarea,
+select {
+  font-size: 16px;
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+  border: 1px solid #777;
+  display: block;
+  width: 300px;
+}
+textarea {
+  min-height: 5rem;
+  min-width: 300px;
+  resize: vertical;
+}
+
+button {
+  font-size: 16px;
+  padding: 0.3em 0.8em;
+  border-radius: 4px;
+  border: 1px solid #777;
+  cursor: pointer;
+}
+
+/* utility classes */
+
+.flex {
+  display: flex;
+}
+
+.between {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tac {
+  text-align: center;
+}
+
+.unlisted {
+  list-style: none;
+  padding-left: 0;
+}
+
+.gap-10 {
+  gap: 10px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+
+.card {
+  box-shadow: 10px 10px 15px #14e9f0;
+  border: 3px solid black;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  background-image: url(https://png.pngtree.com/background/20220716/original/pngtree-gradient-aqua-blue-poster-background-picture-image_1634957.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 600px) {
+  .card {
+    width: 250px;
+  }
+  input {
+    width: 250px;
+  }
+  textarea {
+    min-width: 250px;
+    width: 250px;
+  }
+}

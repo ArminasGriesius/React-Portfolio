@@ -1,0 +1,118 @@
+.singleItemContainer {
+  padding-left: 10px;
+  padding-right: 10px;
+  /* apridboti tik maximalu ploti */
+  max-width: 1440px;
+  /* skaiciuoti parastes automatiskai vienodai is kaires ir is desines */
+  margin: 3em auto;
+  width: 80%;
+}
+
+.singleItemGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.singleItemImg {
+  border-radius: 15px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.singleItemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding: 0em 0; */
+  width: 80%;
+}
+.singleItemName {
+  color: #e65615;
+  font-size: 3em;
+  margin-bottom: 0;
+}
+.singleItemDescription {
+  color: #e65615;
+}
+
+.singleItemPriceTitle {
+  color: #e65615;
+  margin-bottom: 0;
+}
+
+.singleItemPrice {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #e65615;
+}
+.singleItemCart {
+  display: flex;
+  justify-content: space-between;
+  /* width: 60%; */
+  padding-bottom: 10px;
+}
+
+.singleItemCounterContainer {
+  display: flex;
+  align-items: center;
+}
+
+.singleItemCounter {
+  display: inline-block;
+  /* border: 1px solid #fff; */
+  padding: 10px 23.3px;
+  margin: 0;
+  border-radius: 5px;
+}
+.singleItemCountBtn {
+  padding: 10.5px 15px;
+  background-color: #e65615;
+  color: #333;
+  border-radius: 5px;
+  font-weight: bold;
+  /* font-size: 15px; */
+}
+
+.singleItemCartBtn {
+  padding: 10px 30px;
+  background-color: #e65615;
+  /* border: 1px solid #fff; */
+}
+
+.singleItemErrorAndTotalPrice {
+  display: flex;
+  justify-content: space-between;
+}
+
+.singleItemHideError {
+  display: none;
+}
+
+.singleItemShowError {
+  /* display: block; */
+  color: tomato;
+  display: inline;
+}
+
+.singleItemTotalPrice {
+  text-align: right;
+  display: block;
+}
+
+.singleItemBottomTitle {
+  text-align: center;
+  margin: 20px 0;
+  padding: 20px 0;
+  border-top: 1px solid #fff;
+}
+
+.singleItemBottomFlex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.singleItemLi {
+  color: #fff;
+  padding-bottom: 10px;
+}
