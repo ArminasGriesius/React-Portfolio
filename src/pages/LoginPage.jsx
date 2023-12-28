@@ -3,26 +3,22 @@ import css from "./LoginPage.module.css";
 export default function LoginPage() {
   return (
     <div className="container">
-      <h2 className={css.loginPageTitle}>Login Page</h2>
+      <h1 className={css.loginPageTitle}>Login Page</h1>
       <div className={css.loginContainer}>
         <LoginForm />
         <div className={css.loginPageText}>
           <h4>Already a member? Login and enjoy! </h4>
           <ul>
             <li>
-              <p>See the list of items available</p>
-            </li>
-            <li>
               <p>Create your own item</p>
             </li>
             <li>
-              <p>See and be able to press Logout NavLink</p>
+              <p>Manage your items</p>
+            </li>
+            <li>
+              <p>Shop for items</p>
             </li>
           </ul>
-          <p>
-            And even more options available when i'm better at React, so stay
-            tuned!!
-          </p>
         </div>
       </div>
     </div>

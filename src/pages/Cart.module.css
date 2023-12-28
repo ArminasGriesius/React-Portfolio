@@ -1,0 +1,73 @@
+.cartContainer {
+  padding: 15px 0px;
+  max-width: 1440px;
+  max-width: 80%;
+  margin: 30px auto;
+}
+.cartList {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+  padding: 15px 0px;
+}
+
+.cartItemFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  align-items: center;
+  min-width: 500px;
+}
+
+.cartItemImg {
+  max-width: 10%;
+}
+
+.cartQuantity {
+  display: flex;
+  flex-direction: row;
+}
+
+.cartPay {
+  width: 400px;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.cartSummary {
+  border-bottom: 2px solid white;
+  padding-bottom: 5px;
+}
+
+.discountField {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.codeNotValid {
+  color: red;
+}
+
+.cartPayFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.grandTotalPrice {
+  border-top: 1px solid white;
+  padding-top: 20px;
+}
+
+.discounted {
+  color: tomato;
+}
+
+.checkoutButton {
+  width: 100%;
+  background-color: #e65615;
+}

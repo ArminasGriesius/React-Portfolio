@@ -1,4 +1,11 @@
+import { Link, NavLink } from "react-router-dom";
 import css from "./Footer.module.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFacebook,
+  faInstagram,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons";
 
 export default function Footer() {
   return (
@@ -6,33 +13,50 @@ export default function Footer() {
       <footer className="container">
         <div className={css.footer}>
           <div className={css.sideLine}>
-            <h4>About us</h4>
-            <p>We started with HTML and CSS</p>
-            <p>Second came JavaScript</p>
-            <p>A bit of Git</p>
-            <p>And finally, React</p>
+            <h4 className={css.footerTitle}>About us</h4>
+            <div className={css.footerListSection}>
+              <NavLink to="course-htmlandcss">HTML and CSS</NavLink>
+              <NavLink to="course-git">Git</NavLink>
+              <NavLink to="course-javascript">JavaScript</NavLink>
+              <NavLink to="course-react">REACT</NavLink>
+              <NavLink to="passion-music">Music</NavLink>
+              <NavLink to="passion-acting">Acting</NavLink>
+              <NavLink to="passion-coding">Coding</NavLink>
+            </div>
           </div>
           <div className={css.sideLine}>
-            <h4>Help center</h4>
-            <p>We had recordings that we could watch</p>
-            <p>Indian programmers tutorials</p>
-            <p>W3Schools</p>
+            <div className={css.footerListSection}>
+              <h4 className={css.footerTitle}>Help center</h4>
+              <a href="https://www.w3schools.com/">W3schools</a>
+              <a href="https://stackoverflow.com/">StackOverflow</a>
+              <a href="https://www.w3schools.com/">W3schools</a>
+            </div>
           </div>
           <div>
-            <h4>Contact Us</h4>
-            <p>
-              {" "}
-              <a href="https://www.google.lt">Please don't</a>
-            </p>
-            <p>No phone number available</p>
-            <p>No email available</p>
+            <h4 className={css.footerTitle}>Contact Us</h4>
+            <p>arminas.griesius@gmail.com</p>
+            <p>+37064822663</p>
           </div>
         </div>
         <div className={css.icons}>
-          <i className="fa fa-twitter"></i>
-          <i className="fa fa-envelope"></i>
-          <i className="fa fa-phone"></i>
-          <i className="fa fa-instagram"></i>
+          <a
+            className={css.iconLinks}
+            href="https://www.facebook.com/arminas.griesius.5"
+          >
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
+          <a
+            className={css.iconLinks}
+            href="https://www.linkedin.com/in/arminas-griesius-31b055295/"
+          >
+            <FontAwesomeIcon icon={faLinkedin} />
+          </a>
+          <a
+            className={css.iconLinks}
+            href="https://www.instagram.com/arminvangriesius/"
+          >
+            <FontAwesomeIcon icon={faInstagram} />
+          </a>
         </div>
       </footer>
     </div>

@@ -1,12 +1,14 @@
 import { addDoc, collection } from "firebase/firestore";
 import { useFormik } from "formik";
-import { useState } from "react";
 import * as Yup from "yup";
 import { db } from "../firebase/firebase";
 import { toast } from "react-hot-toast";
 import css from "./AddItemPage.module.css";
+import { useAuth } from "../store/AuthProvider";
 
 export default function AddItemPage() {
+  const ctx = useAuth();
+
   const initialValues = {
     itemName: "",
     type: "",
@@ -16,113 +18,85 @@ export default function AddItemPage() {
     imageUrl: "",
     maker: "",
     model: "",
+    userUid: "",
   };
 
-  // Validation schema using Yup
   const validationSchema = Yup.object({
     itemName: Yup.string()
-      .min(4, "Item name is too short")
+      .min(3, "Item name is too short")
       .trim()
-      .max(255)
+      .max(20, "Item name is too long")
       .required("Item name is required"),
     type: Yup.string()
       .required("Item type is required")
-      .min(4, "Minimum 4 characters")
+      .min(2, "Minimum 4 characters")
+      .max(20, "Item type is too long")
       .trim(),
     description: Yup.string()
       .min(6, "Description is too short")
+      .max(300, "Description is too long")
       .trim()
       .required("Description is required"),
     price: Yup.number()
       .min(0.01, "Nothing is free")
       .max(1000000, "Be realistic")
-      // .integer("Price must be an integer")
       .required("Price is required"),
     year: Yup.number()
-      .min(1990, "No older than 1990")
-      .max(2023, "No future items")
-      // .integer("Price must be an integer")
+      .min(1960, "No older than 1960")
+      .max(2024, "No future items")
       .required("Year is required"),
     address: Yup.string()
       .required("address is required")
       .min(4, "Minimum 4 characters")
+      .max(100, "Address is too long")
       .trim(),
     imageUrl: Yup.string()
       .required("Main Image URL is required")
+      .max(200, "Image URL is too long")
       .url("Invalid URL"),
     maker: Yup.string()
       .required("Maker is required")
-      .min(4, "Minimum 4 characters")
+      .min(2, "Minimum 2 characters")
+      .max(50, "Maker name is too long")
       .trim(),
     model: Yup.string()
       .required("Model is required")
-      .min(4, "Minimum 4 characters")
+      .min(1, "Minimum 1 characters")
+      .max(50, "Model name is too long")
       .trim(),
   });
 
-  // Formik configuration
   const formik = useFormik({
     initialValues,
     validationSchema: validationSchema,
     onSubmit: (values) => {
-      // Handle form submission here
-      // console.log('Form submitted with values:', values);
       const newAddItem = {
         ...values,
-        // userUid: ctx.userUid,
+        userUid: ctx.userUid,
       };
-      console.log("newAddObjWithUid ===", newAddItem);
       sendDataToFireBase(newAddItem);
     },
   });
-  console.log("formik.errors ===", formik.errors);
 
   async function sendDataToFireBase(dataToSend) {
-    console.log("creating");
     try {
       const docRef = await addDoc(collection(db, "items"), dataToSend);
-      console.log("Document written with ID: ", docRef.id);
       toast.success("Item created");
       formik.resetForm();
     } catch (error) {
-      console.error("Error adding document: ", error);
-      toast.error("something went wrong");
+      toast.error("something went wrong", error);
     }
   }
 
   return (
-    <div className="container">
+    <div className={css.addItemPageContainer}>
       <h1 className={css.addItemPageTitle}>Add Item</h1>
-      <div className={css.addItemPageContainer}>
-        <div className={css.instructions}>
-          <h4>How to create a Item? Follow instructions below: </h4>
-          <ul>
-            <li>
-              <p>Enter your item Name, must be at least 4 characters.</p>
-            </li>
-            <li>
-              <p>Writre a short description of your item.</p>
-            </li>
-            <li>
-              <p>
-                Enter a year your item was opened. Note: items older than 1970
-                are not allowed here.
-              </p>
-            </li>
-            <li>
-              <p>Enter the name of a address your item was founded.</p>
-            </li>
-            <li>
-              <p>Input the URL of your item. Note: must be a valid URL.</p>
-            </li>
-            <li>
-              <p>Press 'Create your item!!' button</p>
-            </li>
-          </ul>
-          <p>
-            And if you followed these instructions correctly, CONGRADULATIONS!!
-          </p>
-        </div>
+      <p className={css.addItemPageText}>
+        To add an item to the shop please fill the form below. Please note that
+        all fields are required. Press submit button and your product will
+        appear in the Store.
+      </p>
+      <section className={css.addItemPageSection}>
         <form onSubmit={formik.handleSubmit}>
           <div className={css.addItemFormBox}>
             <h2 className={css.addItemFormTitle}>Add Item</h2>
@@ -154,9 +128,10 @@ export default function AddItemPage() {
                 <p className={css.error}>{formik.errors.type}</p>
               )}
             </div>
-            <div>
+            <div className={css.labelsDescription}>
               <label className={css.labels}>Description</label>
               <textarea
+                className={css.textareaField}
                 id="description"
                 name="description"
                 type="text"
@@ -257,7 +232,7 @@ export default function AddItemPage() {
             </button>
           </div>
         </form>
-      </div>
+      </section>
     </div>
   );
 }

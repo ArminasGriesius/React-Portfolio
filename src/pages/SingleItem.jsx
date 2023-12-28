@@ -1,56 +1,55 @@
 import { Link, useParams } from "react-router-dom";
-import css from "./ItemsPage.module.css";
 import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import { useEffect, useState } from "react";
-
+import { useAuth } from "../store/AuthProvider";
+import css from "./SingleItem.module.css";
 export default function SingleItem(props) {
   const [localItemsArr, setLocalItemsArr] = useState([]);
+
+  const ctx = useAuth();
 
   async function getItemsFromFirebase() {
     try {
       const querySnapshot = await getDocs(collection(db, "items"));
       const itemsBack = [];
       querySnapshot.forEach((item) => {
-        // doc.data() is never undefined for query doc snapshots
-        console.log(item.id, " => ", item.data());
         itemsBack.push({
           id: item.id,
           ...item.data(),
         });
       });
       setLocalItemsArr(itemsBack);
-    } catch (error) {
-      console.log("something went wrong", error);
-    }
+    } catch (error) {}
   }
 
   useEffect(() => {
     getItemsFromFirebase();
-    console.log("localItemsArr ===", localItemsArr);
   }, []);
   return (
-    <li className={css.card} key={props.id}>
-      {/* <Link to={`/singleItem/${sObj.id}`} state={sObj}> */}
+    <li
+      className={`${css.card} ${
+        ctx.userUid === props.userUid ? css.myProduct : ""
+      }`}
+      key={props.id}
+    >
       <div>
         <img className={css.itemImg} src={props.imageUrl} alt="Item picture" />
         <div className={css.itemInfo}>
           <h4 className={css.itemTitle}>
-            {props.itemName} {props.model}
+            {props.itemName} {props.model.substring(0, 7)}
           </h4>
-          <p className={css.about}>{props.description}</p>
-          <div className={css.addressAndYear}>
-            <p className={css.year}>€ {parseFloat(props.price).toFixed(2)}</p>
+
+          <p className={css.about}>
+            {props.description.length > 50
+              ? `${props.description.substring(0, 50)}...`
+              : props.description}
+          </p>
+          <div className={css.itemPrice}>
+            <p className={css.price}>€ {parseFloat(props.price).toFixed(2)}</p>
           </div>
         </div>
       </div>
-      {/* </Link> */}
-      <button
-        className={css.deleteButton}
-        onClick={() => handleDelete(props.id)}
-      >
-        Delete
-      </button>
     </li>
   );
 }

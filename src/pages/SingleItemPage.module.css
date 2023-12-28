@@ -1,11 +1,10 @@
 .singleItemContainer {
   padding-left: 10px;
   padding-right: 10px;
-  /* apridboti tik maximalu ploti */
   max-width: 1440px;
-  /* skaiciuoti parastes automatiskai vienodai is kaires ir is desines */
   margin: 3em auto;
   width: 80%;
+  max-width: 1440px;
 }
 
 .singleItemGrid {
@@ -112,7 +111,21 @@
   justify-content: space-between;
 }
 
+.singleItemBottomFlexLeft {
+  width: 50%;
+}
+
 .singleItemLi {
   color: #fff;
   padding-bottom: 10px;
+}
+
+.deleteButton {
+  display: block;
+  text-align: left;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin: 15px 5px;
+  color: white;
+  background-color: rgb(5, 73, 156);
 }

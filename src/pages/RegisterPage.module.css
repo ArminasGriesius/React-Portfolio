@@ -1,24 +1,57 @@
 .registerContainer {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.registerPageTitle {
+  text-align: center;
+  position: relative;
+  font-size: 80px;
+  padding: 0.8em;
+  margin: 0;
+}
+.registerPageTitle::after {
+  content: "Register" !important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(50px, 15vw, 150px);
+  font-weight: 800;
+  line-height: 1;
+  color: #1a1a1a;
+  text-shadow: -1px 0 rgba(255, 255, 255, 0.1), 0 1px rgba(255, 255, 255, 0.1),
+    1px 0 rgba(255, 255, 255, 0.1), 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.registerSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 80%;
+  margin: 0 auto;
   gap: 30px;
   justify-content: center;
   align-items: center;
-}
-.registerPageTitle {
-  padding: 30px;
+  max-width: 1440px;
 }
 
 .registerFormBox {
   display: grid;
   gap: 30px;
-  border: 2px solid #000;
-  border-radius: 10px;
-  box-shadow: 10px 10px 15px #0e999e;
   max-width: 350px;
+  margin: 50px auto;
   padding: 30px;
-  background-image: url(https://png.pngtree.com/background/20220716/original/pngtree-gradient-aqua-blue-poster-background-picture-image_1634957.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
+  max-width: 600px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  box-shadow: 10px 10px 15px white;
 }
 
 .registerFormTitle {
@@ -27,17 +60,19 @@
 }
 
 .labels {
-  color: #10b4b9;
-  -webkit-text-stroke: 1px black;
+  color: white;
 }
 .registerSubmitButton {
   font-weight: bold;
-  background-color: transparent;
+  width: 50%;
+  margin: 15px auto;
   border: 2px solid #000;
   box-shadow: 10px 10px 15px #011212;
 }
 .error {
   color: tomato;
+  font-size: 18px;
+  margin-bottom: 0;
 }
 
 @media screen and (max-width: 600px) {

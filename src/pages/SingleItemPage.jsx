@@ -1,16 +1,49 @@
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import css from "./SingleItemPage.module.css";
 import { useState } from "react";
-import { deleteDoc, doc } from "firebase/firestore";
+import { addDoc, collection, deleteDoc, doc } from "firebase/firestore";
 import { db } from "../firebase/firebase";
+import { useAuth } from "../store/AuthProvider";
+import toast from "react-hot-toast";
 
 export default function SingleItemPage() {
+  const ctx = useAuth();
+
   const location = useLocation();
   const sObj = location.state;
   const [counter, setCounter] = useState(0);
   const [errorMessageVisible, setErrorMessageVisible] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
   const navigate = useNavigate();
+
+  function getOrCreateLocalUserId() {
+    let userId = localStorage.getItem("localUserId");
+    if (!userId) {
+      userId = generateUniqueId();
+      localStorage.setItem("localUserId", userId);
+    }
+    return userId;
+  }
+  function generateUniqueId() {
+    return "xxxx-xxxx-xxxx-xxxx".replace(/[x]/g, function (c) {
+      var r = (Math.random() * 16) | 0,
+        v = c === "x" ? r : (r & 0x3) | 0x8;
+      return v.toString(16);
+    });
+  }
+
+  async function sendDataToFireBase(dataToSend) {
+    try {
+      let userId = ctx.userUid || getOrCreateLocalUserId();
+      const cartCollectionName = `cart_${userId}`;
+      const docRef = await addDoc(
+        collection(db, cartCollectionName),
+        dataToSend
+      );
+    } catch (error) {
+      console.log("error ===", error);
+    }
+  }
 
   function countMinus() {
     if (counter <= 0) {
@@ -30,10 +63,30 @@ export default function SingleItemPage() {
   }
 
   async function handleDelete(itemId) {
-    console.log("delete", itemId);
+    if (window.confirm("Are you sure you want to delete this item?")) {
+      await deleteDoc(doc(db, "items", itemId));
+      navigate("/store");
+    }
+  }
 
-    await deleteDoc(doc(db, "items", itemId));
-    navigate("/store");
+  function handleAddToCart() {
+    if (counter === 0) {
+      toast.error("Can't add 0 items to Cart");
+    } else {
+      const cartItem = {
+        itemId: sObj.id,
+        imageUrl: sObj.imageUrl,
+        itemName: sObj.itemName,
+        maker: sObj.maker,
+        model: sObj.model,
+        price: sObj.price,
+        type: sObj.type,
+        year: sObj.year,
+        quantity: counter,
+      };
+      sendDataToFireBase(cartItem);
+      toast.success("Item added to Cart");
+    }
   }
 
   return (
@@ -65,7 +118,12 @@ export default function SingleItemPage() {
                 +
               </button>
             </div>
-            <button className={css.singleItemCartBtn}>To Cart</button>
+            <button
+              onClick={() => handleAddToCart(sObj.id)}
+              className={css.singleItemCartBtn}
+            >
+              To Cart
+            </button>
           </div>
           <div
             className={
@@ -86,17 +144,19 @@ export default function SingleItemPage() {
         </div>
       </div>
       <div>
-        <button
-          className={css.deleteButton}
-          onClick={() => handleDelete(sObj.id)}
-        >
-          Delete
-        </button>
+        {ctx.userUid === sObj.userUid && (
+          <button
+            className={css.deleteButton}
+            onClick={() => handleDelete(sObj.id)}
+          >
+            Delete your product
+          </button>
+        )}
         <div>
           <h2 className={css.singleItemBottomTitle}>Product Information</h2>
         </div>
         <div className={css.singleItemBottomFlex}>
-          <div>
+          <div className={css.singleItemBottomFlexLeft}>
             <h4 className={css.singleItemDescription}>Description</h4>
             <p> {sObj.description}</p>
             <ul>

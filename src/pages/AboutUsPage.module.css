@@ -1,3 +1,8 @@
+.aboutUsContainer {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
 .aboutUsTitle {
   text-align: center;
   position: relative;
@@ -28,5 +33,185 @@
   font-size: 14px;
   text-align: center;
   max-width: 50%;
-  margin: 0 auto; /* Automatiškai centruoja elementą */
+  margin: 0 auto;
+}
+
+.myAbout {
+  display: flex;
+  flex-direction: row;
+  padding-top: 80px;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+
+.myPhoto {
+  border-radius: 5%;
+  width: 50%;
+}
+
+.aboutMeTopRight {
+  margin: auto 0;
+}
+
+.textOverTitle {
+  font-weight: bold;
+  color: #e65615;
+}
+
+.myName {
+  font-size: 36px;
+  padding-bottom: 50px;
+}
+
+.aboutMeHash {
+  display: flex;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.hashtag {
+  color: #e65616;
+  font-weight: 800;
+  font-size: 36px;
+}
+
+.hashTitle {
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.experienceFieldContainer {
+  overflow: hidden;
+  position: relative;
+  margin: 60px 0px;
+}
+
+.experienceFieldImg {
+  opacity: 0.2;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+}
+
+.experienceFieldGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.experienceFieldLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.courseName {
+  font-size: 36px;
+}
+
+.experienceFieldRight {
+  background-color: #e65615;
+  border-radius: 15px;
+  margin: 100px 0px;
+  padding: 50px 100px;
+}
+
+.experienceFieldRightTitle {
+  padding-bottom: 15px;
+}
+
+.learnedListFlex {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  padding-bottom: 15px;
+}
+
+.logosLink {
+  width: 25%;
+}
+
+.logos {
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.logos:hover {
+  transform: scale3d(1.1, 1.1, 1.1);
+}
+
+.learnedListTitle {
+  margin-bottom: 0;
+}
+
+.passionTitle {
+  position: relative;
+  font-size: 40px;
+  padding: 0.8em;
+  margin: 0;
+}
+
+.passionTitle::after {
+  content: "My Passions" !important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  font-size: clamp(25px, 15vw, 75px);
+  font-weight: 800;
+  line-height: 1;
+  color: #1a1a1a;
+  text-shadow: -1px 0 rgba(255, 255, 255, 0.1), 0 1px rgba(255, 255, 255, 0.1),
+    1px 0 rgba(255, 255, 255, 0.1), 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.passionBoxesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.passionBox {
+  display: flex;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  border-radius: 15px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  transition: all 0.3s;
+}
+.passionBox:hover {
+  transform: scale3d(1.1, 1.1, 1);
+}
+.passionBox:hover .passionSubject {
+  color: #e65615;
+}
+
+.passionImg1 {
+  background-image: url(src/fotos/meMusicCard.jpeg);
+}
+.passionImg2 {
+  background-image: url(src/fotos/meActingMain.jpeg);
+}
+.passionImg3 {
+  background-image: url(src/fotos/meCodingBox.jpeg);
+}
+
+.passionSubject {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 36px;
+  transition: all 0.8s;
 }

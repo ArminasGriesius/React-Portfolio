@@ -21,7 +21,6 @@ export default function LoginForm() {
         .required(),
     }),
     onSubmit: (values) => {
-      console.log("supildytos reiksmes -", values);
       loginWithFire(values.email, values.password);
     },
   });
@@ -32,12 +31,10 @@ export default function LoginForm() {
       .then((userCredential) => {
         toast.success("Login successful, welcome");
         const user = userCredential.user;
-        console.log("user ===", user);
         navigate("/store", { replace: true });
       })
       .catch((error) => {
         toast.error("Login failed, check email or password");
-        console.warn(error.code, error.message);
         formik.resetForm();
       });
   }

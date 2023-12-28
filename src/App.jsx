@@ -9,8 +9,15 @@ import Footer from "./components/layout/Footer";
 import { useAuth } from "./store/AuthProvider";
 import InitPage from "./pages/InitPage";
 import AboutUsPage from "./pages/AboutUsPage";
-import SingleItem from "./pages/SingleItem";
 import SingleItemPage from "./pages/SingleItemPage";
+import Cart from "./pages/Cart";
+import Music from "./pages/PassionPages/Music";
+import Acting from "./pages/PassionPages/Acting";
+import Coding from "./pages/PassionPages/Coding";
+import GitCourse from "./pages/coursesPages/GitCourse";
+import HtmlAndCssCourse from "./pages/coursesPages/HtmlAndCssCourse";
+import JavascriptCourse from "./pages/coursesPages/JavascriptCourse";
+import ReactCourse from "./pages/coursesPages/ReactCourse";
 
 export default function App() {
   const ctx = useAuth();
@@ -22,6 +29,21 @@ export default function App() {
         <Route path={"/about"} element={<AboutUsPage />}></Route>
         <Route path={"/"} element={<InitPage />}></Route>
         <Route path={"/store"} element={<ItemsPage />}></Route>
+        <Route path={"/cart"} element={<Cart />}></Route>
+
+        <Route path={"/passion-music"} element={<Music />}></Route>
+        <Route path={"/passion-acting"} element={<Acting />}></Route>
+        <Route path={"/passion-Coding"} element={<Coding />}></Route>
+        <Route path={"/course-git"} element={<GitCourse />}></Route>
+        <Route path={"/course-react"} element={<ReactCourse />}></Route>
+        <Route
+          path={"/course-javascript"}
+          element={<JavascriptCourse />}
+        ></Route>
+        <Route
+          path={"/course-htmlandcss"}
+          element={<HtmlAndCssCourse />}
+        ></Route>
 
         <Route
           path={"/add-item-page"}

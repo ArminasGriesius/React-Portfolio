@@ -1,0 +1,163 @@
+.actingContainer {
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1440px;
+}
+.actingTitle {
+  text-align: center;
+  position: relative;
+  font-size: 80px;
+  padding: 0.8em;
+  margin: 0;
+}
+.actingTitle::after {
+  content: "Acting" !important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(50px, 15vw, 150px);
+  font-weight: 800;
+  line-height: 1;
+  color: #1a1a1a;
+  text-shadow: -1px 0 rgba(255, 255, 255, 0.1), 0 1px rgba(255, 255, 255, 0.1),
+    1px 0 rgba(255, 255, 255, 0.1), 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.actingAbout {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.myPhoto {
+  width: 100%;
+  height: 100%;
+  border-radius: 5%;
+  margin: 0 auto;
+}
+
+.aboutActingTopRight {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  height: 100%;
+}
+
+.aboutActingSectionTitle {
+  color: #e65615;
+}
+
+.aboutActingHash {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 30px;
+  padding-bottom: 20px;
+}
+
+.hashtag {
+  color: #e65616;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.hashTitle {
+  color: #e65615;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.sliderTitle {
+  position: relative;
+  font-size: 40px;
+  margin: 0;
+  font-weight: bold;
+  padding: 0.8em;
+}
+
+.sliderTitle::after {
+  content: "Moments" !important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  font-size: clamp(25px, 15vw, 75px);
+  font-weight: 800;
+  line-height: 1;
+  color: #1a1a1a;
+  text-shadow: -1px 0 rgba(255, 255, 255, 0.1), 0 1px rgba(255, 255, 255, 0.1),
+    1px 0 rgba(255, 255, 255, 0.1), 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.sliderSection {
+  padding-bottom: 40px;
+}
+
+.sliderImg {
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  position: relative;
+}
+
+.sliderImgText {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(-8%);
+  background-color: black;
+  padding: 10px;
+  margin: 0;
+}
+
+.imaginacijusTitle {
+  text-align: left;
+  position: relative;
+  font-size: 40px;
+  padding: 0.8em;
+  margin: 0;
+}
+
+.imaginacijusTitle::after {
+  content: "Imaginacijaus Theater" !important;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  font-size: clamp(25px, 15vw, 75px);
+  font-weight: 800;
+  line-height: 1;
+  color: #1a1a1a;
+  text-shadow: -1px 0 rgba(255, 255, 255, 0.1), 0 1px rgba(255, 255, 255, 0.1),
+    1px 0 rgba(255, 255, 255, 0.1), 0 -1px rgba(255, 255, 255, 0.1);
+}
+
+.imaginacijusSpotifyLink {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.aboutActingTopLeft {
+  width: 50%;
+  margin: auto 0;
+}

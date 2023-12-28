@@ -15,15 +15,14 @@ export default function RegisterPage() {
     validationSchema: Yup.object({
       email: Yup.string()
         .email("Must be a valid email")
+        .max(255)
         .required("Email is required"),
       password: Yup.string()
         .min(4, "Password must be at least 4 characters")
         .max(255)
         .required("password is required"),
     }),
-    onSubmit: (values) => {
-      console.log("supildytos reiksmes -", values);
-    },
+    onSubmit: (values) => {},
   });
 
   const auth = getAuth();
@@ -39,32 +38,25 @@ export default function RegisterPage() {
         if (errorCode === "auth/email-already-in-use") {
           toast.error("Email already exist");
         }
-        console.log("errorCode ===", errorCode);
-        const errorMessage = error.message;
-        console.log("errorMessage ===", errorMessage);
+        toast.error("Invalid email");
       });
   };
   return (
-    <div className="container">
-      <h2 className={css.registerPageTitle}>Welcome to Register Page</h2>
-      <div className={css.registerContainer}>
+    <div className={css.registerContainer}>
+      <h2 className={css.registerPageTitle}>Register</h2>
+      <section className={css.registerSection}>
         <div className={css.registerPageText}>
-          <h4>Want to become a member? Create an account and be able to: </h4>
+          <h4>
+            Want to become a member? <br /> Create an account and be able to:
+          </h4>
           <ul>
-            <li>
-              <p>See the list of items available</p>
-            </li>
             <li>
               <p>Create your own item</p>
             </li>
             <li>
-              <p>See and be able to press Logout NavLink</p>
+              <p>Manage your items</p>
             </li>
           </ul>
-          <p>
-            And even more options available when i'm better at React, so stay
-            tuned!!
-          </p>
         </div>
         <form className={css.registerFormBox} onSubmit={formik.handleSubmit}>
           <h4 className={css.registerFormTitle}>Register Here</h4>
@@ -104,7 +96,7 @@ export default function RegisterPage() {
             Submit
           </button>
         </form>
-      </div>
+      </section>
     </div>
   );
 }

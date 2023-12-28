@@ -1,5 +1,5 @@
 .footerContainer {
-  background: linear-gradient(to top, #006384, transparent);
+  background: #1a1a1a;
   margin-top: 50px;
   border-top: 1px solid #000;
 }
@@ -14,19 +14,34 @@
 }
 .sideLine {
   border-right: 1px solid #000;
+  padding-right: 50px;
 }
+
+.footerTitle {
+  color: #e65615;
+}
+
+.footerListSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-right: 80px;
+}
+
 .icons {
   display: flex;
   justify-content: center;
-  gap: 10px;
-  font-size: 18px;
+  gap: 30px;
   margin-top: 20px;
   padding-bottom: 30px;
 }
-i {
-  border: 1px solid #000;
-  border-radius: 50px;
-  padding: 10px;
+.iconLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 150px;
+  border-radius: 50%;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 600px) {

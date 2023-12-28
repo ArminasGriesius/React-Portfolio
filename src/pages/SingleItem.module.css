@@ -1,0 +1,71 @@
+.card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  width: 300px;
+  height: 450px;
+  transition: all 0.3s;
+}
+
+.card:hover {
+  transform: scale3d(1.1, 1.1, 1);
+  background-color: #e65615;
+}
+
+.card:hover .price {
+  color: white;
+}
+
+.myProduct {
+  background-color: red;
+}
+.myProduct:hover {
+  background-color: #e65615;
+}
+.myProduct .price {
+  color: white;
+}
+
+.itemImg {
+  align-items: center;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.itemInfo {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.itemTitle {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: left;
+  margin-bottom: 0;
+  padding-bottom: 5px;
+  color: #ffffff;
+  -webkit-text-stroke: 1px black;
+}
+
+.about {
+  text-align: left;
+  padding: 5px;
+}
+
+.itemPrice {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.price {
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px;
+  color: #e65615;
+  font-weight: bold;
+  font-size: 24px;
+  transition: all 0.7s;
+}

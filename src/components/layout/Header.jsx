@@ -3,6 +3,7 @@ import css from "./Header.module.css";
 import { getAuth, signOut } from "firebase/auth";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../store/AuthProvider";
+import { MdShoppingCart } from "react-icons/md";
 
 function logoutFire() {
   const auth = getAuth();
@@ -12,13 +13,12 @@ function logoutFire() {
       toast.success("You have logged out");
     })
     .catch((error) => {
-      console.log("error ===", error);
+      toast.error(error);
     });
 }
 
 export default function Header() {
   const ctx = useAuth();
-  console.log("ctx ===", ctx);
   return (
     <div className={css.headerContainer}>
       <header className={css.header}>
@@ -62,6 +62,11 @@ export default function Header() {
               Logout
             </NavLink>
           )}
+
+          <NavLink className={`${css.navLink} ${css.cart}`} to={"/cart"}>
+            <MdShoppingCart />
+          </NavLink>
+
           {ctx.isUserLoggedIn && <p className={css.shownEmail}>{ctx.email}</p>}
         </nav>
       </header>
