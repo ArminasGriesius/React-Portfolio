@@ -24,6 +24,18 @@ With this project, my goal is not only to showcase my technical proficiency but 
 
 ## Showcase
 
+`/`
+![Home Page](screenshots/1.png)
+
+`/store`
+![Store](screenshots/2.png)
+
+`/about`
+![About Us](screenshots/3.png)
+
+`/passion-music`
+![Passions](screenshots/4.png)
+
 ## Getting Started
 
 This is an example of how you may give instructions on setting up your project locally.
