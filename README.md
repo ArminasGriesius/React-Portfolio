@@ -6,17 +6,11 @@
 
 - [Table Of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
-- [Built With](#built-with)
+- [Showcase](#showcase)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Usage](#usage)
-- [Roadmap](#roadmap)
-- [Contributing](#contributing)
-  - [Creating A Pull Request](#creating-a-pull-request)
-- [License](#license)
 - [Authors](#authors)
-- [Acknowledgements](#acknowledgements)
 
 ## About the project
 
