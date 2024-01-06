@@ -111,16 +111,3 @@ button {
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-@media screen and (max-width: 600px) {
-  .card {
-    width: 250px;
-  }
-  input {
-    width: 250px;
-  }
-  textarea {
-    min-width: 250px;
-    width: 250px;
-  }
-}
