@@ -27,9 +27,15 @@ export default function Footer() {
           <div className={css.sideLine}>
             <div className={css.footerListSection}>
               <h4 className={css.footerTitle}>Help center</h4>
-              <a href="https://www.w3schools.com/">W3schools</a>
-              <a href="https://stackoverflow.com/">StackOverflow</a>
-              <a href="https://www.w3schools.com/">W3schools</a>
+              <Link to="https://www.w3schools.com/" target="_blank">
+                W3schools
+              </Link>
+              <Link to="https://stackoverflow.com/" target="_blank">
+                StackOverflow
+              </Link>
+              <Link to="https://www.w3schools.com/" target="_blank">
+                W3schools
+              </Link>
             </div>
           </div>
           <div>
@@ -39,24 +45,25 @@ export default function Footer() {
           </div>
         </div>
         <div className={css.icons}>
-          <a
+          <Link
             className={css.iconLinks}
-            href="https://www.facebook.com/arminas.griesius.5"
+            to="https://www.facebook.com/arminas.griesius.5"
+            target="_blank"
           >
             <FontAwesomeIcon icon={faFacebook} />
-          </a>
-          <a
+          </Link>
+          <Link
             className={css.iconLinks}
-            href="https://www.linkedin.com/in/arminas-griesius-31b055295/"
+            to="https://www.linkedin.com/in/arminas-griesius-31b055295/"
           >
             <FontAwesomeIcon icon={faLinkedin} />
-          </a>
-          <a
+          </Link>
+          <Link
             className={css.iconLinks}
-            href="https://www.instagram.com/arminvangriesius/"
+            to="https://www.instagram.com/arminvangriesius/"
           >
             <FontAwesomeIcon icon={faInstagram} />
-          </a>
+          </Link>
         </div>
       </footer>
     </div>
