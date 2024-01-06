@@ -1,10 +1,6 @@
 import LoginForm from "../components/auth/LoginForm";
-import { useAuth } from "../store/AuthProvider";
 import css from "./LoginPage.module.css";
 export default function LoginPage() {
-  const ctx = useAuth();
-  console.log(ctx.isUserLoggedIn);
-  console.log("ctx ===", ctx);
   return (
     <div className="container">
       <h1 className={css.loginPageTitle}>Login Page</h1>
