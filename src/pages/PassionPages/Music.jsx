@@ -36,6 +36,27 @@ export default function Music() {
   const settings = {
     infinite: true,
     slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+
     slidesToScroll: 1,
     autoplay: true,
     speed: 1000,
@@ -169,16 +190,18 @@ export default function Music() {
       <section className={css.musicContainer}>
         <h2 className={css.iamreyTitle}>IAMREY</h2>
         <div className={css.iamreyYoutubeLink}>
-          <iframe
-            className={css.iamreyVideo}
-            width="560"
-            height="315"
-            src="https://www.youtube.com/embed/CapQ2ygfjg8?si=tIP9nUsOEoG1ugZj"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          ></iframe>
+          <div className={css.iframeYoutubeContainer}>
+            <iframe
+              className={css.iamreyVideo}
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/CapQ2ygfjg8?si=tIP9nUsOEoG1ugZj"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
           <div className={css.aboutMusicTopRight}>
             <h2 className={css.aboutMusicSectionTitle}>
               "Iš Apačios" live session
