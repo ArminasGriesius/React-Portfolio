@@ -13,7 +13,7 @@ export default function AboutUsPage() {
         <div className={css.myAbout}>
           <img
             className={css.myPhoto}
-            src="src/fotos/meMainMain.png"
+            src="src/fotos/meMainMain.jpeg"
             alt="Arminas"
           />
           <div className={css.aboutMeTopRight}>

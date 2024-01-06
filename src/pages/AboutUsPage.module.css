@@ -215,3 +215,170 @@
   font-size: 36px;
   transition: all 0.8s;
 }
+
+@media screen and (max-width: 1023px) {
+  .aboutUsTitle {
+    font-size: 40px;
+  }
+
+  .aboutUsTitle::after {
+    font-size: clamp(25px, 7vw, 75px);
+  }
+  .myAbout {
+    gap: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .textOverTitle {
+    font-size: 12px;
+  }
+
+  .myName {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .experienceFieldLeft {
+    font-size: 12px;
+  }
+
+  .experienceFieldLeft h2 {
+    font-size: 22px;
+  }
+
+  .courseName {
+    font-size: 12px;
+  }
+
+  .experienceFieldRight {
+    border-radius: 15px;
+    margin: 30px 0px;
+    padding: 20px 40px;
+  }
+
+  .experienceFieldRightTitle {
+    padding-bottom: 0px;
+    font-size: 26px;
+  }
+
+  .learnedListFlex {
+    gap: 10px;
+    padding-bottom: 5px;
+  }
+
+  .learnedListTitle {
+    font-size: 14px;
+  }
+
+  .passionTitle {
+    font-size: 28px;
+  }
+
+  .passionTitle::after {
+    font-size: clamp(20px, 15vw, 50px);
+  }
+
+  .passionBoxesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .aboutUsTitle {
+    font-size: 36px;
+  }
+
+  .aboutUsTitle::after {
+    font-size: clamp(30px, 12vw, 75px);
+  }
+
+  .aboutUsText {
+    max-width: 80%;
+  }
+
+  .myAbout {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 30px;
+  }
+
+  .myPhoto {
+    margin: 0 auto;
+    width: 100%;
+    padding-bottom: 15px;
+  }
+
+  .myName {
+    font-size: 20px;
+    padding-bottom: 10px;
+  }
+
+  .aboutMeHash {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+  .hashtag {
+    padding: 0;
+    margin: 0;
+  }
+
+  .experienceFieldImg {
+    height: 100%;
+  }
+
+  .experienceFieldGrid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0px;
+    padding-top: 50px;
+    text-align: center;
+  }
+
+  .experienceFieldRightTitle {
+    font-size: 18px;
+  }
+
+  .learnedListFlex {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+  }
+
+  .logosLink {
+    width: 35%;
+  }
+
+  .passionTitle {
+    text-align: center;
+  }
+
+  .passionTitle::after {
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(15px, 11vw, 50px);
+  }
+
+  .passionBoxesGrid {
+    grid-template-columns: repeat(1, 1fr);
+    padding-top: 50px;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 374px) {
+  .aboutUsText {
+    font-size: 10px;
+  }
+  .passionBoxesGrid {
+    width: 250px;
+  }
+}
