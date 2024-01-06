@@ -1,7 +1,7 @@
 import React from "react";
 import css from "./HtmlAndCssCourse.module.css";
 import Slider from "react-slick";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function HtmlAndCssCourse() {
   function SampleNextArrow(props) {
@@ -136,12 +136,13 @@ export default function HtmlAndCssCourse() {
             and CSS project based on the learned topics.
           </p>
           <div>
-            <NavLink
+            <Link
               to="https://github.com/ArminasGriesius/Arminas_Griesius_html_css_darbas.git"
               className={css.linkToGit}
+              target="_blank"
             >
               HTML&CSS Final Work
-            </NavLink>
+            </Link>
           </div>
         </div>
         <div className={css.sliderContainer}>

@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./ReactCourse.module.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function ReactCourse() {
   return (
@@ -114,12 +114,13 @@ export default function ReactCourse() {
             and CSS project based on the learned topics.
           </p>
           <div>
-            <NavLink
+            <Link
               to="https://github.com/ArminasGriesius/Arminas-Griesius-FEU8-baigiamasis-darbas"
               className={css.linkToGit}
+              target="_blank"
             >
               REACT Final Work
-            </NavLink>
+            </Link>
           </div>
         </div>
         <img

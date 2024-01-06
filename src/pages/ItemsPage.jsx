@@ -1,4 +1,4 @@
-import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import { db } from "../firebase/firebase";
 import css from "./ItemsPage.module.css";

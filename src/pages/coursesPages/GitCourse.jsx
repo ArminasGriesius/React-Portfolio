@@ -1,6 +1,5 @@
 import React from "react";
 import css from "./GitCourse.module.css";
-import { NavLink } from "react-router-dom";
 
 export default function GitCourse() {
   return (

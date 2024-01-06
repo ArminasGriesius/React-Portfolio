@@ -1,6 +1,6 @@
 import React from "react";
 import css from "./JavascriptCourse.module.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function JavascriptCourse() {
   return (
@@ -106,12 +106,13 @@ export default function JavascriptCourse() {
             and CSS project based on the learned topics.
           </p>
           <div>
-            <NavLink
+            <Link
               to="https://github.com/ArminasGriesius/Arminas_Griesius_JS_Exam.git"
               className={css.linkToGit}
+              target="_blank"
             >
               JavaScript Final Work
-            </NavLink>
+            </Link>
           </div>
         </div>
         <img
