@@ -93,27 +93,41 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1023px) {
+  .addItemPageText {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .addItemPageTitle {
     text-align: center;
+    font-size: 40px;
   }
-  .instructions {
-    display: none;
+
+  .addItemPageTitle::after {
+    font-size: clamp(25px, 12vw, 75px);
   }
-  .addItemFormBox {
-    width: 290px;
-    margin-top: 0;
+
+  .addItemPageText {
+    width: 100%;
   }
 
   .addItemFormBox {
-    display: grid;
     grid-template-columns: 1fr;
-    gap: 30px;
-    margin: 50px auto;
-    padding: 30px;
-    border: 2px solid white;
-    border-radius: 10px;
-    background-color: #1f1f1f;
-    box-shadow: 10px 10px 15px white;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .addItemFormBox {
+    max-width: 300px;
+  }
+
+  .addItemFormBox input {
+    width: 80%;
+  }
+  .textareaField {
+    /* nereaguoja */
   }
 }

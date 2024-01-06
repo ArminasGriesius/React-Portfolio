@@ -80,7 +80,7 @@ export default function AddItemPage() {
 
   async function sendDataToFireBase(dataToSend) {
     try {
-      const docRef = await addDoc(collection(db, "items"), dataToSend);
+      await addDoc(collection(db, "items"), dataToSend);
       toast.success("Item created");
       formik.resetForm();
     } catch (error) {
