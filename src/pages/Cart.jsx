@@ -100,10 +100,15 @@ export default function Cart() {
   }, [discountCode]);
 
   return (
-    <div className={css.cartContainer}>
+    <div>
+      <h2 className={css.cartPageTitle}>Cart</h2>
       <section className={css.cartList}>
         <div className={css.flexCartAndPay}>
-          <div className={css.cartItemFlex}>
+          <div
+            className={`${css.cartItemFlexHeadlines} ${
+              localCartArr.length === 0 ? css.emptyCartItemFlex : ""
+            }`}
+          >
             <p>Image</p>
             <p>Product Name</p>
             <p>Model</p>
@@ -120,14 +125,68 @@ export default function Cart() {
                   alt="Product image"
                 />
                 <h4>{sObj.itemName}</h4>
-                <h5>{sObj.model.substring(0, 5)}</h5>
-                <p>{sObj.price} €</p>
-                <div className={css.cartQuantity}>
-                  <p>{sObj.quantity}</p>
-                  <button onClick={() => countPlus(sObj.id)}>+</button>
-                  <button onClick={() => countMinus(sObj.id)}>-</button>
+                <h5>{sObj.model}</h5>
+                <div>
+                  <p className={css.responsiveProductsHeadlines}>Price</p>
+                  <p>{sObj.price} €</p>
                 </div>
-                <p>{sObj.quantity * sObj.price} €</p>
+                <div>
+                  <p className={css.responsiveProductsHeadlines}>Quantity</p>
+                  <div className={css.cartQuantity}>
+                    <p>{sObj.quantity}</p>
+                    <button onClick={() => countPlus(sObj.id)}>+</button>
+                    <button onClick={() => countMinus(sObj.id)}>-</button>
+                  </div>
+                </div>
+                <div>
+                  <p className={css.responsiveProductsHeadlines}>Total price</p>
+                  <p>{sObj.quantity * sObj.price} €</p>
+                </div>
+              </div>
+            ))
+          ) : (
+            <div>
+              <p> No items in the cart </p>
+              <img
+                src="https://static.thenounproject.com/png/4440881-200.png"
+                alt=""
+              />
+            </div>
+          )}
+          {localCartArr.length > 0 ? (
+            localCartArr.map((sObj) => (
+              <div className={css.lowResCartItems} key={sObj.id}>
+                <div className={css.productImgAndName}>
+                  <img
+                    className={css.cartItemImg}
+                    src={sObj.imageUrl}
+                    alt="Product image"
+                  />
+                  <div className={css.nameAndModel}>
+                    <h4>{sObj.itemName}</h4>
+                    <h5>{sObj.model}</h5>
+                  </div>
+                </div>
+                <div className={css.productPriceAndQuantity}>
+                  <div>
+                    <p className={css.responsiveProductsHeadlines}>Price</p>
+                    <p>{sObj.price} €</p>
+                  </div>
+                  <div>
+                    <p className={css.responsiveProductsHeadlines}>Quantity</p>
+                    <div className={css.cartQuantity}>
+                      <p>{sObj.quantity}</p>
+                      <button onClick={() => countPlus(sObj.id)}>+</button>
+                      <button onClick={() => countMinus(sObj.id)}>-</button>
+                    </div>
+                  </div>
+                  <div>
+                    <p className={css.responsiveProductsHeadlines}>
+                      Total price
+                    </p>
+                    <p>{sObj.quantity * sObj.price} €</p>
+                  </div>
+                </div>
               </div>
             ))
           ) : (
