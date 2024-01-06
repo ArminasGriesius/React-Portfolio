@@ -1,10 +1,14 @@
 import LoginForm from "../components/auth/LoginForm";
+import { useAuth } from "../store/AuthProvider";
 import css from "./LoginPage.module.css";
 export default function LoginPage() {
+  const ctx = useAuth();
+  console.log(ctx.isUserLoggedIn);
+  console.log("ctx ===", ctx);
   return (
     <div className="container">
       <h1 className={css.loginPageTitle}>Login Page</h1>
-      <div className={css.loginContainer}>
+      <section className={css.loginSection}>
         <LoginForm />
         <div className={css.loginPageText}>
           <h4>Already a member? Login and enjoy! </h4>
@@ -20,7 +24,7 @@ export default function LoginPage() {
             </li>
           </ul>
         </div>
-      </div>
+      </section>
     </div>
   );
 }
