@@ -100,6 +100,7 @@ export default function SingleItemPage() {
         <div className={css.singleItemInfo}>
           <div>
             <h2 className={css.singleItemName}>{sObj.itemName}</h2>
+            <h4 className={css.singleItemName}>{sObj.model}</h4>
             <p>Item Id: {sObj.id}</p>
           </div>
           <div>
