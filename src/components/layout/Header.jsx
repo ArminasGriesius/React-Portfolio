@@ -4,6 +4,8 @@ import { getAuth, signOut } from "firebase/auth";
 import { toast } from "react-hot-toast";
 import { useAuth } from "../../store/AuthProvider";
 import { MdShoppingCart } from "react-icons/md";
+import { FaBars, FaTimes } from "react-icons/fa";
+import { useEffect, useState } from "react";
 
 function logoutFire() {
   const auth = getAuth();
@@ -18,7 +20,32 @@ function logoutFire() {
 }
 
 export default function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const ctx = useAuth();
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Escape") {
+      setIsMenuOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <div className={css.headerContainer}>
       <header className={css.header}>
@@ -26,30 +53,46 @@ export default function Header() {
           Breaking<strong>Shop</strong>
         </Link>
 
-        <nav className={css.navLinks}>
-          <NavLink className={css.navLink} to={"/"}>
+        <button onClick={toggleMenu} className={css.burger}>
+          {isMenuOpen ? <FaTimes /> : <FaBars />}
+        </button>
+
+        <nav className={`${css.navLinks} ${isMenuOpen ? css.overlayMenu : ""}`}>
+          <NavLink onClick={closeMenu} className={css.navLink} to={"/"}>
             Home
           </NavLink>
-          <NavLink className={css.navLink} to={"/about"}>
+          <NavLink onClick={closeMenu} className={css.navLink} to={"/about"}>
             About Us
           </NavLink>
 
-          <NavLink className={css.navLink} to={"/store"}>
+          <NavLink onClick={closeMenu} className={css.navLink} to={"/store"}>
             Store
           </NavLink>
 
           {ctx.isUserLoggedIn && (
-            <NavLink className={css.navLink} to={"/add-item-page"}>
+            <NavLink
+              onClick={closeMenu}
+              className={css.navLink}
+              to={"/add-item-page"}
+            >
               Add Item
             </NavLink>
           )}
           {!ctx.isUserLoggedIn && (
-            <NavLink className={css.navLink} to={"/login-page"}>
+            <NavLink
+              onClick={closeMenu}
+              className={css.navLink}
+              to={"/login-page"}
+            >
               Login
             </NavLink>
           )}
           {!ctx.isUserLoggedIn && (
-            <NavLink className={css.navLink} to={"/register-page"}>
+            <NavLink
+              onClick={closeMenu}
+              className={css.navLink}
+              to={"/register-page"}
+            >
               Register
             </NavLink>
           )}
@@ -63,7 +106,11 @@ export default function Header() {
             </NavLink>
           )}
 
-          <NavLink className={`${css.navLink} ${css.cart}`} to={"/cart"}>
+          <NavLink
+            onClick={closeMenu}
+            className={`${css.navLink} ${css.cart}`}
+            to={"/cart"}
+          >
             <MdShoppingCart />
           </NavLink>
 
