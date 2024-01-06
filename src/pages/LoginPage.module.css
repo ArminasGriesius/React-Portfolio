@@ -31,7 +31,7 @@
     1px 0 rgba(255, 255, 255, 0.1), 0 -1px rgba(255, 255, 255, 0.1);
 }
 
-.loginContainer {
+.loginSection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   align-items: center;
@@ -39,11 +39,40 @@
   padding-top: 50px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1023px) {
   .loginPageTitle {
-    text-align: center;
+    font-size: 40px;
   }
-  .loginPageText {
+  .loginPageTitle::after {
+    font-size: clamp(25px, 7vw, 75px);
+  }
+
+  .loginSection {
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .loginPageTitle {
+    font-size: 36px;
+  }
+  .loginPageTitle::after {
+    font-size: clamp(30px, 12vw, 75px);
+  }
+  .loginSection {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .loginSection h4 {
+    margin-bottom: 0;
+  }
+  .loginSection ul {
     display: none;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .loginSection h4 {
+    font-size: 12px;
   }
 }

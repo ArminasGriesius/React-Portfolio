@@ -44,7 +44,6 @@
 .registerFormBox {
   display: grid;
   gap: 30px;
-  max-width: 350px;
   margin: 50px auto;
   padding: 30px;
   max-width: 600px;
@@ -75,12 +74,53 @@
   margin-bottom: 0;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1023px) {
   .registerPageTitle {
-    text-align: center;
+    font-size: 40px;
+  }
+  .registerPageTitle::after {
+    font-size: clamp(25px, 7vw, 75px);
   }
 
-  .registerPageText {
-    display: none;
+  .registerSection {
+    width: 100%;
+    padding-top: 40px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .registerPageTitle {
+    font-size: 36px;
+  }
+  .registerPageTitle::after {
+    font-size: clamp(30px, 12vw, 75px);
+  }
+
+  .registerSection {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .registerSection h4 {
+    margin-bottom: 0;
+  }
+
+  .registerFormBox {
+    margin: 0px auto;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .registerSection h4,
+  p {
+    font-size: 12px;
+  }
+
+  .registerFormBox {
+    box-shadow: none;
+  }
+
+  .registerFormBox input {
+    width: auto;
   }
 }
