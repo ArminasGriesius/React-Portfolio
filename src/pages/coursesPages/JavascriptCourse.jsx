@@ -75,14 +75,14 @@ export default function JavascriptCourse() {
           </div>
         </div>
       </section>
-      <section className={css.aboutSubjectSection}>
+      <section className={css.subjectSection}>
         <img
           className={css.jsPageImg}
           src="src/fotos/ForEach.jpeg"
           alt="ForEach loop"
         />
-        <div className={css.aboutSubjectTextSide}>
-          <h2 className={css.aboutSubjectTitle}>Loops</h2>
+        <div className={css.subjectTextSide}>
+          <h2 className={css.subjectTitle}>Loops</h2>
           <p>
             The subject that probably caused the most frustration for my
             computer was loops. Countless infinite loops have taught me to tread
@@ -95,9 +95,9 @@ export default function JavascriptCourse() {
           </p>
         </div>
       </section>
-      <section className={css.aboutSubjectSection}>
-        <div className={css.aboutSubjectTextSide}>
-          <h2 className={css.aboutSubjectTitle}>Functions</h2>
+      <section className={css.secondSubjectSection}>
+        <div className={css.subjectTextSide}>
+          <h2 className={css.subjectTitle}>Functions</h2>
           <p>
             We familiarized ourselves with Sass and Bootstrap frameworks,
             discovering more diverse, faster, and practical ways to design or

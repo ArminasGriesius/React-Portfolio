@@ -80,14 +80,14 @@ export default function ReactCourse() {
           </div>
         </div>
       </section>
-      <section className={css.aboutSubjectSection}>
+      <section className={css.subjectSection}>
         <img
           className={css.reactPageImg}
           src="src/fotos/PropsState.png"
           alt="Props and State"
         />
-        <div className={css.aboutSubjectTextSide}>
-          <h2 className={css.aboutSubjectTitle}>Props & State</h2>
+        <div className={css.subjectTextSide}>
+          <h2 className={css.subjectTitle}>Props & State</h2>
           <p>
             Props and state are fundamental aspects of React. The ability to
             pass props between components serves as a valuable tool for creating
@@ -103,9 +103,9 @@ export default function ReactCourse() {
           </p>
         </div>
       </section>
-      <section className={css.aboutSubjectSection}>
-        <div className={css.aboutGridTextSide}>
-          <h2 className={css.aboutSubjectTitle}>Firebase</h2>
+      <section className={css.secondSubjectSection}>
+        <div className={css.subjectTextSide}>
+          <h2 className={css.subjectTitle}>Firebase</h2>
           <p>
             We familiarized ourselves with Sass and Bootstrap frameworks,
             discovering more diverse, faster, and practical ways to design or

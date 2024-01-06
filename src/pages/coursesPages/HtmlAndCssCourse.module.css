@@ -47,7 +47,7 @@
   align-items: center;
   width: 300px;
   height: 250px;
-  object-fit: cover;
+  object-fit: fill;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
@@ -68,10 +68,16 @@
   color: white;
 }
 
-.flexGridSection {
+.subjectsSection {
   display: flex;
   gap: 50px;
   padding: 80px 0px;
+}
+
+.secondSubjectSection {
+  display: flex;
+  gap: 50px;
+  padding: 40px 0px;
 }
 
 .sliderContainer {
@@ -83,13 +89,13 @@
   height: 300px;
 }
 
-.aboutFlexGridRight {
+.aboutSubjectRight {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.aboutFlexGridRightTitle {
+.aboutSubjectRightTitle {
   color: #e65615;
 }
 
@@ -101,4 +107,67 @@
   color: #333;
   border-radius: 5px;
   font-weight: bold;
+}
+
+@media screen and (max-width: 1023px) {
+  .htmlCssTitle {
+    font-size: 40px;
+  }
+  .htmlCssTitle::after {
+    font-size: clamp(25px, 12vw, 75px);
+  }
+
+  .weeksList {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .subjectsSection {
+    align-items: stretch;
+  }
+
+  .aboutSubjectRight p {
+    font-size: 14px;
+  }
+
+  .aboutSubjectRightTitle {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .weeksList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .subjectsSection {
+    flex-direction: column-reverse;
+    justify-content: center;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  .secondSubjectSection {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .sliderContainer {
+    width: 100%;
+  }
+
+  .sliderImg {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .htmlCssTitle {
+    font-size: 30px;
+  }
+
+  .linkToGit {
+    padding: 5px 10px;
+  }
 }

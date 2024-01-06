@@ -63,7 +63,7 @@
   color: white;
 }
 
-.gridSection {
+.gitSection {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 50px;
@@ -74,12 +74,48 @@
   border-radius: 15px;
 }
 
-.aboutGridTextSide {
+.aboutGitTextSide {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.aboutGridTitle {
+.aboutGitTitle {
   color: #e65615;
+}
+
+@media screen and (max-width: 1023px) {
+  .gitTitle {
+    font-size: 40px;
+  }
+  .gitTitle::after {
+    font-size: clamp(25px, 12vw, 75px);
+  }
+
+  .branchesImg {
+    height: 100%;
+  }
+
+  .aboutGitTextSide p {
+    font-size: 14px;
+  }
+
+  .aboutGitTitle {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .gitSection {
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .gitTitle {
+    font-size: 30px;
+  }
 }

@@ -20,7 +20,7 @@ export default function GitCourse() {
           </div>
         </div>
       </section>
-      <section className={css.gridSection}>
+      <section className={css.gitSection}>
         <div>
           <img
             className={css.branchesImg}
@@ -28,8 +28,8 @@ export default function GitCourse() {
             alt="Git branches"
           />
         </div>
-        <div className={css.aboutGridTextSide}>
-          <h2 className={css.aboutGridTitle}>Working Together</h2>
+        <div className={css.aboutGitTextSide}>
+          <h2 className={css.aboutGitTitle}>Working Together</h2>
           <p>
             We gained familiarity with Git, understanding how to collaborate
             within a team on a shared project. This involved learning version

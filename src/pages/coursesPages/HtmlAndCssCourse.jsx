@@ -97,7 +97,7 @@ export default function HtmlAndCssCourse() {
           </div>
         </div>
       </section>
-      <section className={css.flexGridSection}>
+      <section className={css.subjectsSection}>
         <div className={css.sliderContainer}>
           <Slider {...settings}>
             <img
@@ -112,8 +112,8 @@ export default function HtmlAndCssCourse() {
             />
           </Slider>
         </div>
-        <div className={css.aboutFlexGridRight}>
-          <h2 className={css.aboutFlexGridRightTitle}>Flex & Grid</h2>
+        <div className={css.aboutSubjectRight}>
+          <h2 className={css.aboutSubjectRightTitle}>Flex & Grid</h2>
           <p>
             One of the most enjoyable subjects in the courses was Flexbox and
             Grid. In my classes, we learned them through engaging coding games.
@@ -123,9 +123,9 @@ export default function HtmlAndCssCourse() {
           </p>
         </div>
       </section>
-      <section className={css.flexGridSection}>
-        <div className={css.aboutFlexGridRight}>
-          <h2 className={css.aboutFlexGridRightTitle}>
+      <section className={css.secondSubjectSection}>
+        <div className={css.aboutSubjectRight}>
+          <h2 className={css.aboutSubjectRightTitle}>
             Sass, Bootstrap and Figma
           </h2>
           <p>
