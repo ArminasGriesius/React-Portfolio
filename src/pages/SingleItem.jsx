@@ -37,7 +37,7 @@ export default function SingleItem(props) {
         <img className={css.itemImg} src={props.imageUrl} alt="Item picture" />
         <div className={css.itemInfo}>
           <h4 className={css.itemTitle}>
-            {props.itemName} {props.model.substring(0, 7)}
+            {props.itemName} {props.model.substring(0, 8)}
           </h4>
 
           <p className={css.about}>
