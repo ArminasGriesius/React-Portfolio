@@ -36,6 +36,26 @@ export default function Acting() {
   const settings = {
     infinite: true,
     slidesToShow: 4,
+    responsive: [
+      {
+        breakpoint: 1023,
+        settings: {
+          slidesToShow: 3,
+        },
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 2,
+        },
+      },
+      {
+        breakpoint: 425,
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
     slidesToScroll: 1,
     autoplay: true,
     speed: 1000,

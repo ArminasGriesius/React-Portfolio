@@ -113,13 +113,13 @@
 
 .sliderImg {
   width: 100%;
-  height: 600px;
   object-fit: cover;
   position: relative;
 }
 
 .sliderImgText {
   position: absolute;
+  font-size: 12px;
   bottom: 0;
   transform: translateY(-8%);
   background-color: black;
@@ -129,6 +129,7 @@
 
 .codintStartedTitle {
   text-align: left;
+  font-size: 12px;
   position: relative;
   font-size: 40px;
   padding: 0.8em;
@@ -168,4 +169,105 @@
   border-radius: 5%;
   width: 100%;
   margin: 0 auto;
+}
+
+@media screen and (max-width: 1023px) {
+  .codingTitle {
+    font-size: 40px;
+  }
+  .codingTitle::after {
+    font-size: clamp(25px, 7vw, 75px);
+  }
+
+  .codingAbout {
+    gap: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .aboutCodingTopRight {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .sliderTitle {
+    font-size: 28px;
+  }
+
+  .sliderTitle::after {
+    font-size: clamp(20px, 15vw, 50px);
+  }
+
+  .sliderContainer {
+    width: 60%;
+  }
+
+  .codintStartedTitle {
+    font-size: 28px;
+  }
+
+  .codintStartedTitle::after {
+    font-size: clamp(20px, 12vw, 40px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .codingTitle {
+    font-size: 36px;
+  }
+
+  .codingTitle::after {
+    font-size: clamp(30px, 14vw, 75px);
+  }
+
+  .codingAbout {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    font-size: 12px;
+  }
+
+  .aboutCodingHash {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+
+  .hashtag {
+    padding: 0;
+    margin: 0;
+  }
+
+  .codintStartedTitle {
+    text-align: center;
+  }
+
+  .codintStartedTitle::after {
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(15px, 7vw, 50px);
+  }
+
+  .howItStartedSection {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sliderContainer {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .sliderContainer {
+    width: 100%;
+  }
 }

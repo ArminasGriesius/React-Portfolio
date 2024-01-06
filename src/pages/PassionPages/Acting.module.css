@@ -116,6 +116,7 @@
 
 .sliderImgText {
   position: absolute;
+  font-size: 12px;
   bottom: 0;
   transform: translateY(-8%);
   background-color: black;
@@ -160,4 +161,98 @@
 .aboutActingTopLeft {
   width: 50%;
   margin: auto 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .actingTitle {
+    font-size: 40px;
+  }
+  .actingTitle::after {
+    font-size: clamp(25px, 7vw, 75px);
+  }
+
+  .actingAbout {
+    gap: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+  }
+
+  .sliderTitle {
+    font-size: 28px;
+  }
+
+  .sliderTitle::after {
+    font-size: clamp(20px, 15vw, 50px);
+  }
+
+  .imaginacijusTitle {
+    font-size: 28px;
+  }
+
+  .imaginacijusTitle::after {
+    font-size: clamp(20px, 6vw, 40px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .actingTitle {
+    font-size: 36px;
+  }
+  .actingTitle::after {
+    font-size: clamp(30px, 14vw, 75px);
+  }
+
+  .actingAbout {
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    gap: 10px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+    font-size: 12px;
+  }
+
+  .aboutActingTopLeft {
+    margin-top: 20px;
+  }
+
+  .aboutActingHash {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+  }
+
+  .hashtag {
+    padding: 0;
+    margin: 0;
+  }
+
+  .sliderTitle {
+    text-align: center;
+  }
+
+  .sliderTitle::after {
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(15px, 11vw, 50px);
+  }
+
+  .imaginacijusTitle {
+    text-align: center;
+  }
+
+  .imaginacijusTitle::after {
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(15px, 7vw, 50px);
+  }
+
+  .imaginacijusSpotifyLink {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .aboutActingTopLeft {
+    width: 100%;
+  }
 }
