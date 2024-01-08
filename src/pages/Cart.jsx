@@ -190,13 +190,7 @@ export default function Cart() {
               </div>
             ))
           ) : (
-            <div>
-              <p> No items in the cart </p>
-              <img
-                src="https://static.thenounproject.com/png/4440881-200.png"
-                alt=""
-              />
-            </div>
+            <div></div>
           )}
         </div>
         <div>

@@ -7,7 +7,7 @@ export default function GitCourse() {
       <h1 className={css.gitTitle}>Git</h1>
       <section className={css.weeksList}>
         <div className={css.singleBox}>
-          <img className={css.weekImg} src={"src/fotos/Git.png"} alt="Git" />
+          <img className={css.weekImg} src={"./fotos/Git.png"} alt="Git" />
           <div className={css.subjectInfo}>
             <h4 className={css.subjectTitle}>Week 1</h4>
             <ul className={css.subjectList}>
@@ -23,7 +23,7 @@ export default function GitCourse() {
         <div>
           <img
             className={css.branchesImg}
-            src="src/fotos/Branches.png"
+            src="./fotos/Branches.png"
             alt="Git branches"
           />
         </div>

@@ -29,42 +29,42 @@ export default function InitPage() {
         <div className={css.experienceFieldRight}>
           <img
             className={css.toolLogo}
-            src="src/fotos/React.png"
+            src="./fotos/React.png"
             alt="React logo"
           />
           <img
             className={css.toolLogo}
-            src="src/fotos/FirebaseLogo.jpeg"
+            src="./fotos/FirebaseLogo.png"
             alt="Firebase logo"
           />
           <img
             className={css.toolLogo}
-            src="src/fotos/Formik.png"
+            src="./fotos/Formik.png"
             alt="Formik logo"
           />
           <img
             className={css.toolLogo}
-            src="src/fotos/YupLogo.png"
+            src="./fotos/YupLogo.png"
             alt="Yup logo"
           />
           <img
             className={css.toolLogo}
-            src="src/fotos/HotToast.jpeg"
+            src="./fotos/HotToast.png"
             alt="Hot Toast logo"
           />
           <img
             className={css.toolLogo}
-            src="src/fotos/ModulesLogo.png"
+            src="./fotos/ModulesLogo.png"
             alt="Modules Css logo"
           />
           <img
             className={css.toolLogo}
-            src="src/fotos/FontAwesome.png"
+            src="./fotos/FontAwesome.png"
             alt="Font Awesome logo"
           />
           <img
             className={css.toolLogo}
-            src="src/fotos/SlickLogo.png"
+            src="./fotos/SlickLogo.png"
             alt="Slick logo"
           />
         </div>

@@ -42,7 +42,7 @@ export default function SingleItem(props) {
 
           <p className={css.about}>
             {props.description.length > 50
-              ? `${props.description.substring(0, 50)}...`
+              ? `${props.description.substring(0, 45)}...`
               : props.description}
           </p>
           <div className={css.itemPrice}>

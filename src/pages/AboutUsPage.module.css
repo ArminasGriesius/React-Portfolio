@@ -199,13 +199,13 @@
 }
 
 .passionImg1 {
-  background-image: url(src/fotos/meMusicCard.jpeg);
+  background-image: url(../fotos/MeMusicCard.png);
 }
 .passionImg2 {
-  background-image: url(src/fotos/meActingMain.jpeg);
+  background-image: url(../fotos/MeActingMain.png);
 }
 .passionImg3 {
-  background-image: url(src/fotos/meCodingBox.jpeg);
+  background-image: url(../fotos/MeCodingBox.png);
 }
 
 .passionSubject {

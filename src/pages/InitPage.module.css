@@ -1,7 +1,7 @@
 .initContainer {
   height: 44em;
   background-color: #1f1f1f;
-  background: url("src/fotos/MeHome.png");
+  background: url("../fotos/MeHome.png");
   background-repeat: no-repeat;
   background-size: 560px;
   background-position: calc(100% - 0px) bottom;
@@ -42,7 +42,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url("src/fotos/GridBackground.png");
+  background-image: url("../fotos/GridBackground.png");
   background-size: cover;
   opacity: 0.2;
   z-index: -1;

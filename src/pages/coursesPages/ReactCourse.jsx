@@ -8,11 +8,7 @@ export default function ReactCourse() {
       <h1 className={css.reactTitle}>REACT</h1>
       <section className={css.weeksList}>
         <div className={css.singleBox}>
-          <img
-            className={css.weekImg}
-            src={"src/fotos/React.png"}
-            alt="React"
-          />
+          <img className={css.weekImg} src={"./fotos/React.png"} alt="React" />
           <div className={css.subjectInfo}>
             <h4 className={css.subjectTitle}>Week 1</h4>
             <ul className={css.subjectList}>
@@ -23,7 +19,7 @@ export default function ReactCourse() {
           </div>
         </div>
         <div className={css.singleBox}>
-          <img className={css.weekImg} src={"src/fotos/Hook.png"} alt="Array" />
+          <img className={css.weekImg} src={"./fotos/Hook.png"} alt="Array" />
           <div className={css.subjectInfo}>
             <h4 className={css.subjectTitle}>Week 2</h4>
             <ul className={css.subjectList}>
@@ -37,7 +33,7 @@ export default function ReactCourse() {
         <div className={css.singleBox}>
           <img
             className={css.weekImg}
-            src={"src/fotos/Formik.png"}
+            src={"./fotos/Formik.png"}
             alt="Formik"
           />
           <div className={css.subjectInfo}>
@@ -52,7 +48,7 @@ export default function ReactCourse() {
         <div className={css.singleBox}>
           <img
             className={css.weekImg}
-            src={"src/fotos/Firebase.jpeg"}
+            src={"./fotos/Firebase.png"}
             alt="Firebase"
           />
           <div className={css.subjectInfo}>
@@ -68,7 +64,7 @@ export default function ReactCourse() {
         <div className={css.singleBox}>
           <img
             className={css.weekImg}
-            src={"src/fotos/Tailwind.png"}
+            src={"./fotos/Tailwind.png"}
             alt="Tailwind"
           />
           <div className={css.subjectInfo}>
@@ -83,7 +79,7 @@ export default function ReactCourse() {
       <section className={css.subjectSection}>
         <img
           className={css.reactPageImg}
-          src="src/fotos/PropsState.png"
+          src="./fotos/PropsState.png"
           alt="Props and State"
         />
         <div className={css.subjectTextSide}>
@@ -125,7 +121,7 @@ export default function ReactCourse() {
         </div>
         <img
           className={css.reactPageImg}
-          src="src/fotos/Functions.png"
+          src="./fotos/Functions.png"
           alt="Functions"
         />
       </section>

@@ -52,7 +52,7 @@ export default function Coding() {
         <div className={css.codingAbout}>
           <img
             className={css.myPhoto}
-            src="src/fotos/MeCodingMain.png"
+            src="./fotos/MeCodingMain.png"
             alt="Arminas"
           />
           <div className={css.aboutCodingTopRight}>
@@ -100,7 +100,7 @@ export default function Coding() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/MeBeforeCoding.jpeg"
+              src="./fotos/meBeforeCoding.png"
               alt="Me before coding"
             />
             <p className={css.sliderImgText}>Me before i started coding</p>
@@ -108,7 +108,7 @@ export default function Coding() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/MeAfterCoding.jpeg"
+              src="./fotos/MeAfterCoding.png"
               alt="Me after starting coding"
             />
             <p className={css.sliderImgText}>Me first week of coding</p>
@@ -139,11 +139,7 @@ export default function Coding() {
               </p>
             </div>
           </div>
-          <img
-            className={css.duckPhoto}
-            src="src/fotos/Duck.jpeg"
-            alt="CS50x"
-          />
+          <img className={css.duckPhoto} src="./fotos/Duck.png" alt="CS50x" />
         </div>
       </section>
     </div>

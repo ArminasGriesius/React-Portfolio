@@ -52,7 +52,7 @@ export default function HtmlAndCssCourse() {
         <div className={css.singleBox}>
           <img
             className={css.weekImg}
-            src={"src/fotos/HtmlCssFoto1.png"}
+            src={"./fotos/HtmlCssFoto1.png"}
             alt="Item picture"
           />
           <div className={css.subjectInfo}>
@@ -69,7 +69,7 @@ export default function HtmlAndCssCourse() {
         <div className={css.singleBox}>
           <img
             className={css.weekImg}
-            src={"src/fotos/HtmlCssFoto2.png"}
+            src={"./fotos/HtmlCssFoto2.png"}
             alt="Item picture"
           />
           <div className={css.subjectInfo}>
@@ -84,7 +84,7 @@ export default function HtmlAndCssCourse() {
         <div className={css.singleBox}>
           <img
             className={css.weekImg}
-            src={"src/fotos/HtmlCssFoto3.png"}
+            src={"./fotos/HtmlCssFoto3.png"}
             alt="Item picture"
           />
           <div className={css.subjectInfo}>
@@ -102,12 +102,12 @@ export default function HtmlAndCssCourse() {
           <Slider {...settings}>
             <img
               className={css.sliderImg}
-              src="src/fotos/FlexGame.png"
+              src="./fotos/FlexGame.png"
               alt="Flex game"
             />
             <img
               className={css.sliderImg}
-              src="src/fotos/GridGame.png"
+              src="./fotos/GridGame.png"
               alt="Grid game"
             />
           </Slider>
@@ -147,19 +147,15 @@ export default function HtmlAndCssCourse() {
         </div>
         <div className={css.sliderContainer}>
           <Slider {...settings}>
+            <img className={css.sliderImg} src="./fotos/Scss.png" alt="SCSS" />
             <img
               className={css.sliderImg}
-              src="src/fotos/Scss.png"
-              alt="SCSS"
-            />
-            <img
-              className={css.sliderImg}
-              src="src/fotos/Bootstrap.png"
+              src="./fotos/Bootstrap.png"
               alt="Bootstrap Bill"
             />
             <img
               className={css.sliderImg}
-              src="src/fotos/Figma.png"
+              src="./fotos/Figma.png"
               alt="Figma"
             />
           </Slider>

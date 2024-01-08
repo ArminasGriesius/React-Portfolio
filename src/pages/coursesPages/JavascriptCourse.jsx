@@ -10,7 +10,7 @@ export default function JavascriptCourse() {
         <div className={css.singleBox}>
           <img
             className={css.weekImg}
-            src={"src/fotos/ForLoop.png"}
+            src={"./fotos/ForLoop.png"}
             alt="For Loop"
           />
           <div className={css.subjectInfo}>
@@ -24,11 +24,7 @@ export default function JavascriptCourse() {
           </div>
         </div>
         <div className={css.singleBox}>
-          <img
-            className={css.weekImg}
-            src={"src/fotos/Array.png"}
-            alt="Array"
-          />
+          <img className={css.weekImg} src={"./fotos/Array.png"} alt="Array" />
           <div className={css.subjectInfo}>
             <h4 className={css.subjectTitle}>Week 2</h4>
             <ul className={css.subjectList}>
@@ -40,7 +36,7 @@ export default function JavascriptCourse() {
           </div>
         </div>
         <div className={css.singleBox}>
-          <img className={css.weekImg} src={"src/fotos/Form.png"} alt="Form" />
+          <img className={css.weekImg} src={"./fotos/Form.png"} alt="Form" />
           <div className={css.subjectInfo}>
             <h4 className={css.subjectTitle}>Week 3</h4>
             <ul className={css.subjectList}>
@@ -52,7 +48,7 @@ export default function JavascriptCourse() {
           </div>
         </div>
         <div className={css.singleBox}>
-          <img className={css.weekImg} src={"src/fotos/Oop.png"} alt="OOP" />
+          <img className={css.weekImg} src={"./fotos/Oop.png"} alt="OOP" />
           <div className={css.subjectInfo}>
             <h4 className={css.subjectTitle}>Week 4</h4>
             <ul className={css.subjectList}>
@@ -63,7 +59,7 @@ export default function JavascriptCourse() {
           </div>
         </div>
         <div className={css.singleBox}>
-          <img className={css.weekImg} src={"src/fotos/Crud.png"} alt="Crud" />
+          <img className={css.weekImg} src={"./fotos/Crud.png"} alt="Crud" />
           <div className={css.subjectInfo}>
             <h4 className={css.subjectTitle}>Week 5</h4>
             <ul className={css.subjectList}>
@@ -78,7 +74,7 @@ export default function JavascriptCourse() {
       <section className={css.subjectSection}>
         <img
           className={css.jsPageImg}
-          src="src/fotos/ForEach.jpeg"
+          src="./fotos/ForEach.png"
           alt="ForEach loop"
         />
         <div className={css.subjectTextSide}>
@@ -117,7 +113,7 @@ export default function JavascriptCourse() {
         </div>
         <img
           className={css.jsPageImg}
-          src="src/fotos/Functions.png"
+          src="./fotos/Functions.png"
           alt="Functions"
         />
       </section>

@@ -73,7 +73,7 @@ export default function Music() {
         <section className={css.musicAbout}>
           <img
             className={css.myPhoto}
-            src="src/fotos/meMusicMain.jpeg"
+            src="./fotos/MeMusicMain.png"
             alt="Arminas"
           />
           <div className={css.aboutMusicTopRight}>
@@ -135,7 +135,7 @@ export default function Music() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/meMusic1.png"
+              src="./fotos/MeMusic1.png"
               alt="IAMREY concert in Druskininkai"
             />
             <p className={css.sliderImgText}>IAMREY concert in Druskininkai</p>
@@ -143,7 +143,7 @@ export default function Music() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/meMusic2.png"
+              src="./fotos/MeMusic2.png"
               alt="Midi Roko Operos Kai Tik Atrasiu"
             />
             <p className={css.sliderImgText}>
@@ -153,7 +153,7 @@ export default function Music() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/meMusic6.jpeg"
+              src="./fotos/MeMusic6.png"
               alt="Horse playing near White Bridge"
             />
             <p className={css.sliderImgText}>Horse playing near White Bridge</p>
@@ -161,7 +161,7 @@ export default function Music() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/meMusic4.png"
+              src="./fotos/MeMusic4.png"
               alt="IAMREY Live Session"
             />
             <p className={css.sliderImgText}>IAMREY Live Session</p>
@@ -169,7 +169,7 @@ export default function Music() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/meMusic5.png"
+              src="./fotos/MeMusic5.png"
               alt="Concert Po Bažnyčios Skliautais"
             />
             <p className={css.sliderImgText}>
@@ -177,11 +177,7 @@ export default function Music() {
             </p>
           </div>
           <div>
-            <img
-              className={css.sliderImg}
-              src="src/fotos/meMusic3.jpeg"
-              alt=""
-            />
+            <img className={css.sliderImg} src="./fotos/MeMusic3.png" alt="" />
             <p className={css.sliderImgText}>July 6th concert in Alytus</p>
           </div>
         </Slider>

@@ -13,9 +13,10 @@ export default function AboutUsPage() {
         <div className={css.myAbout}>
           <img
             className={css.myPhoto}
-            src="src/fotos/meMainMain.jpeg"
+            src="./fotos/MeMainMain.png"
             alt="Arminas"
           />
+
           <div className={css.aboutMeTopRight}>
             <p className={css.textOverTitle}>FRONTEND DEVELOPER</p>
             <h2 className={css.myName}>Arminas Griesius</h2>
@@ -63,7 +64,7 @@ export default function AboutUsPage() {
       <section className={css.experienceFieldContainer}>
         <img
           className={css.experienceFieldImg}
-          src="src/fotos/codingBackground.avif"
+          src="./fotos/codingBackground.avif"
           alt="Coding background"
         />
         <div className={css.experienceFieldGrid}>
@@ -83,7 +84,7 @@ export default function AboutUsPage() {
               <NavLink className={css.logosLink} to="/course-htmlandcss">
                 <img
                   className={css.logos}
-                  src="src/fotos/logoHtmlCss.png"
+                  src="./fotos/logoHtmlCss.png"
                   alt="HTML and CSS logo"
                 />
               </NavLink>
@@ -96,7 +97,7 @@ export default function AboutUsPage() {
               <NavLink className={css.logosLink} to="/course-git">
                 <img
                   className={css.logos}
-                  src="src/fotos/logoGit.png"
+                  src="./fotos/logoGit.png"
                   alt="Git logo"
                 />
               </NavLink>
@@ -109,7 +110,7 @@ export default function AboutUsPage() {
               <NavLink className={css.logosLink} to="/course-javascript">
                 <img
                   className={css.logos}
-                  src="src/fotos/logoJs.jpeg"
+                  src="./fotos/logoJs.png"
                   alt="JavaScript logo"
                 />
               </NavLink>
@@ -122,7 +123,7 @@ export default function AboutUsPage() {
               <NavLink className={css.logosLink} to="/course-react">
                 <img
                   className={css.logos}
-                  src="src/fotos/logoReact.png"
+                  src="./fotos/logoReact.png"
                   alt="React logo"
                 />
               </NavLink>

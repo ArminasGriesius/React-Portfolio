@@ -72,7 +72,7 @@ export default function Acting() {
         <div className={css.actingAbout}>
           <img
             className={css.myPhoto}
-            src="src/fotos/MeActingMain.jpeg"
+            src="./fotos/meActingMain.png"
             alt="Arminas"
           />
           <div className={css.aboutActingTopRight}>
@@ -118,7 +118,7 @@ export default function Acting() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/MeActing1.jpeg"
+              src="./fotos/MeActing1.png"
               alt="Musical Mythos"
             />
             <p className={css.sliderImgText}>Moment from musical "Mythos"</p>
@@ -126,7 +126,7 @@ export default function Acting() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/MeActing5.jpeg"
+              src="./fotos/meActing5.png"
               alt="Flowers Musical Mythis"
             />
             <p className={css.sliderImgText}>
@@ -136,7 +136,7 @@ export default function Acting() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/MeActing4.jpeg"
+              src="./fotos/MeActing4.png"
               alt="Play for kids"
             />
             <p className={css.sliderImgText}>
@@ -146,7 +146,7 @@ export default function Acting() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/MeActing2.jpeg"
+              src="./fotos/MeActing2.png"
               alt="Moustache man"
             />
             <p className={css.sliderImgText}>Epic moustache</p>
@@ -154,7 +154,7 @@ export default function Acting() {
           <div>
             <img
               className={css.sliderImg}
-              src="src/fotos/MeActing3.jpeg"
+              src="./fotos/MeActing3.png"
               alt="Playing santa"
             />
             <p className={css.sliderImgText}>Most important role of Santa</p>
