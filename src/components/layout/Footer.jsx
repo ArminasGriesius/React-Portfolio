@@ -33,8 +33,8 @@ export default function Footer() {
               <Link to="https://stackoverflow.com/" target="_blank">
                 StackOverflow
               </Link>
-              <Link to="https://www.w3schools.com/" target="_blank">
-                W3schools
+              <Link to="https://www.geeksforgeeks.org/" target="_blank">
+                Geeks For Geeks
               </Link>
             </div>
           </div>
