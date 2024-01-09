@@ -22,7 +22,6 @@ export default function Cart() {
 
     try {
       const querySnapshot = await getDocs(collection(db, `cart_${userId}`));
-      console.log("userId ===", userId);
       const itemsBack = [];
       querySnapshot.forEach((item) => {
         itemsBack.push({
@@ -31,6 +30,7 @@ export default function Cart() {
         });
       });
       setLocalCartArr(itemsBack);
+      console.log("Discount code - Intern");
     } catch (error) {}
   }
 
@@ -45,14 +45,13 @@ export default function Cart() {
     if (item.quantity === 1) {
       await deleteDoc(doc(db, `cart_${userId}`, itemId));
       toast.success("Item deleted from Cart");
-      console.log("localCartArr ===", localCartArr);
       getItemsFromFirebase();
+
       return;
     } else {
       const updatedCart = localCartArr.map((item) =>
         item.id === itemId ? { ...item, quantity: item.quantity - 1 } : item
       );
-      console.log("localCartArr 2===", localCartArr);
       setLocalCartArr(updatedCart);
     }
   }
@@ -149,7 +148,7 @@ export default function Cart() {
               <p> No items in the cart </p>
               <img
                 src="https://static.thenounproject.com/png/4440881-200.png"
-                alt=""
+                alt="No items found"
               />
             </div>
           )}
@@ -194,7 +193,11 @@ export default function Cart() {
           )}
         </div>
         <div>
-          <div className={css.cartPay}>
+          <div
+            className={`${css.cartPay} ${
+              localCartArr.length === 0 ? css.emptyCartItemFlex : ""
+            }`}
+          >
             <h4 className={css.cartSummary}>Order Summary</h4>
             <form>
               <input
