@@ -72,7 +72,7 @@ export default function Acting() {
         <div className={css.actingAbout}>
           <img
             className={css.myPhoto}
-            src="./fotos/meActingMain.png"
+            src="./fotos/MeActingMain.png"
             alt="Arminas"
           />
           <div className={css.aboutActingTopRight}>
@@ -126,7 +126,7 @@ export default function Acting() {
           <div>
             <img
               className={css.sliderImg}
-              src="./fotos/meActing5.png"
+              src="./fotos/MeActing5.png"
               alt="Flowers Musical Mythis"
             />
             <p className={css.sliderImgText}>

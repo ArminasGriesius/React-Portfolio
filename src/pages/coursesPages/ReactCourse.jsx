@@ -121,8 +121,8 @@ export default function ReactCourse() {
         </div>
         <img
           className={css.reactPageImg}
-          src="./fotos/Functions.png"
-          alt="Functions"
+          src="./fotos/FirebaseArrows.png"
+          alt="Firebase"
         />
       </section>
     </div>

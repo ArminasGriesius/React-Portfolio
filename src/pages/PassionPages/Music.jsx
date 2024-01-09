@@ -177,7 +177,11 @@ export default function Music() {
             </p>
           </div>
           <div>
-            <img className={css.sliderImg} src="./fotos/MeMusic3.png" alt="" />
+            <img
+              className={css.sliderImg}
+              src="./fotos/MeMusic3.png"
+              alt="July 6th concert in Alytus"
+            />
             <p className={css.sliderImgText}>July 6th concert in Alytus</p>
           </div>
         </Slider>
