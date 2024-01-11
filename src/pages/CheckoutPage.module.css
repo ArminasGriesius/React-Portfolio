@@ -1,0 +1,31 @@
+.checkoutPageContainer {
+  width: 50%;
+  margin: 80px auto;
+  max-width: 1440px;
+}
+
+.congrate {
+  display: grid;
+  gap: 30px;
+  text-align: center;
+}
+
+.congrateTitle {
+  color: #e65615;
+}
+
+.linkToInit {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10.5px 15px;
+  background-color: #e65615;
+  color: #333;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 1023px) {
+  .checkoutPageContainer {
+    width: 80%;
+  }
+}
