@@ -33,7 +33,7 @@ With this project, my goal is not only to showcase my technical proficiency but 
 ![Store](screenshots/2.png)
 
 `/about`
-![About Us](screenshots/3.png)
+![About Me](screenshots/3.png)
 
 `/passion-music`
 ![Passions](screenshots/4.png)
