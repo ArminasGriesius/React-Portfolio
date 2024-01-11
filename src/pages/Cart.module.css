@@ -119,8 +119,15 @@
 }
 
 .checkoutButton {
-  width: 100%;
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10.5px 15px;
   background-color: #e65615;
+  color: #333;
+  border-radius: 5px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
 }
 
 @media screen and (max-width: 1280px) {

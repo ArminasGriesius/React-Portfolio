@@ -4,6 +4,7 @@ import { collection, deleteDoc, doc, getDocs } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 import css from "./Cart.module.css";
 import toast from "react-hot-toast";
+import { NavLink } from "react-router-dom";
 
 export default function Cart() {
   const [localCartArr, setLocalCartArr] = useState([]);
@@ -236,7 +237,9 @@ export default function Cart() {
                 <p>{handleDiscount().toFixed(2)} €</p>
               </div>
             </div>
-            <button className={css.checkoutButton}>Proceed to checkout</button>
+            <NavLink className={css.checkoutButton} to="/checkout">
+              Proceed to checkout
+            </NavLink>
           </div>
         </div>
       </section>
