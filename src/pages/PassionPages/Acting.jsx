@@ -94,7 +94,7 @@ export default function Acting() {
                 <p>
                   A production based on the Broadway musical "Hadestown", which
                   retells the Greek mythology tale about Orpheus and Eurydice in
-                  which i played the main role of Orpheus.
+                  which I played the main role of Orpheus.
                 </p>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function Acting() {
               <div>
                 <h4 className={css.hashTitle}>"Imaginacijaus Theater"</h4>
                 <p>
-                  A theater oriented for kids in which i play a number of roles
+                  A theater oriented for kids in which I play a number of roles
                   and also produce music for the plays and audiotales.
                 </p>
               </div>

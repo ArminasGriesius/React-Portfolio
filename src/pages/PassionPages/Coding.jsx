@@ -61,8 +61,8 @@ export default function Coding() {
             </h2>
 
             <p>
-              Fairly new to coding i find myself drawn into possibilities and
-              creative ideas of this form of art. Eager to learn(as i know i've
+              Fairly new to coding I find myself drawn into possibilities and
+              creative ideas of this form of art. Eager to learn(as I know i've
               just touched the tip of the iceberg) i'm preparing to dive down
               the art of programming.
             </p>
@@ -73,7 +73,7 @@ export default function Coding() {
                 <p>
                   The goal of this project was to learn the basics of HTML, CSS,
                   JS and React, develop a deeper skill of finding solutions to
-                  the problems and all errors i face.
+                  the problems and all errors I face.
                 </p>
               </div>
             </div>
@@ -82,11 +82,11 @@ export default function Coding() {
               <div>
                 <h4 className={css.hashTitle}>Struggles</h4>
                 <p>
-                  As a freshly cooked programmer often i found myself
+                  As a freshly cooked programmer often I found myself
                   overwhealmed by the amount of files in one project or even
                   having no idea for even the simplest solutions. But this
                   project showed me that despite kindergarten style of code...
-                  even I can somewhat understand it. And i know i will.
+                  even I can somewhat understand it. And I know I will.
                 </p>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default function Coding() {
               src="./fotos/meBeforeCoding.png"
               alt="Me before coding"
             />
-            <p className={css.sliderImgText}>Me before i started coding</p>
+            <p className={css.sliderImgText}>Me before I started coding</p>
           </div>
           <div>
             <img
