@@ -1,14 +1,14 @@
 import { NavLink } from "react-router-dom";
-import css from "./AboutUsPage.module.css";
+import css from "./AboutMePage.module.css";
 
-export default function AboutUsPage() {
+export default function AboutMePage() {
   return (
     <div>
-      <section className={css.aboutUsContainer}>
-        <h1 className={css.aboutUsTitle}>About Us</h1>
-        <p className={css.aboutUsText}>
+      <section className={css.aboutMeContainer}>
+        <h1 className={css.aboutMeTitle}>About Me</h1>
+        <p className={css.aboutMeText}>
           Hello, my name is Arminas Griesius <br />
-          And i aspire to be a front end engineer
+          And I aspire to be a Front-End engineer.
         </p>
         <div className={css.myAbout}>
           <img
@@ -136,7 +136,7 @@ export default function AboutUsPage() {
         </div>
       </section>
 
-      <section className={css.aboutUsContainer}>
+      <section className={css.aboutMeContainer}>
         <h2 className={css.passionTitle}>My Passions</h2>
         <div className={css.passionBoxesGrid}>
           <NavLink to="/passion-music">

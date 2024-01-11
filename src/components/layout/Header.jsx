@@ -62,7 +62,7 @@ export default function Header() {
             Home
           </NavLink>
           <NavLink onClick={closeMenu} className={css.navLink} to={"/about"}>
-            About Us
+            About Me
           </NavLink>
 
           <NavLink onClick={closeMenu} className={css.navLink} to={"/store"}>

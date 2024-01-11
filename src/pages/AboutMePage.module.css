@@ -1,17 +1,17 @@
-.aboutUsContainer {
+.aboutMeContainer {
   width: 80%;
   margin: 0 auto;
   max-width: 1440px;
 }
-.aboutUsTitle {
+.aboutMeTitle {
   text-align: center;
   position: relative;
   font-size: 80px;
   padding: 0.8em;
   margin: 0;
 }
-.aboutUsTitle::after {
-  content: "About Us" !important;
+.aboutMeTitle::after {
+  content: "About Me" !important;
   position: absolute;
   z-index: -1;
   top: 0;
@@ -29,7 +29,7 @@
     1px 0 rgba(255, 255, 255, 0.1), 0 -1px rgba(255, 255, 255, 0.1);
 }
 
-.aboutUsText {
+.aboutMeText {
   font-size: 14px;
   text-align: center;
   max-width: 50%;
@@ -217,11 +217,11 @@
 }
 
 @media screen and (max-width: 1023px) {
-  .aboutUsTitle {
+  .aboutMeTitle {
     font-size: 40px;
   }
 
-  .aboutUsTitle::after {
+  .aboutMeTitle::after {
     font-size: clamp(25px, 7vw, 75px);
   }
   .myAbout {
@@ -285,15 +285,15 @@
 }
 
 @media screen and (max-width: 767px) {
-  .aboutUsTitle {
+  .aboutMeTitle {
     font-size: 36px;
   }
 
-  .aboutUsTitle::after {
+  .aboutMeTitle::after {
     font-size: clamp(30px, 12vw, 75px);
   }
 
-  .aboutUsText {
+  .aboutMeText {
     max-width: 80%;
   }
 
@@ -375,7 +375,7 @@
 }
 
 @media screen and (max-width: 374px) {
-  .aboutUsText {
+  .aboutMeText {
     font-size: 10px;
   }
   .passionBoxesGrid {

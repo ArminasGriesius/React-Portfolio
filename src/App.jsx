@@ -8,7 +8,7 @@ import { Toaster } from "react-hot-toast";
 import Footer from "./components/layout/Footer";
 import { useAuth } from "./store/AuthProvider";
 import InitPage from "./pages/InitPage";
-import AboutUsPage from "./pages/AboutUsPage";
+import AboutMePage from "./pages/AboutMePage";
 import SingleItemPage from "./pages/SingleItemPage";
 import Cart from "./pages/Cart";
 import Music from "./pages/PassionPages/Music";
@@ -18,6 +18,7 @@ import GitCourse from "./pages/coursesPages/GitCourse";
 import HtmlAndCssCourse from "./pages/coursesPages/HtmlAndCssCourse";
 import JavascriptCourse from "./pages/coursesPages/JavascriptCourse";
 import ReactCourse from "./pages/coursesPages/ReactCourse";
+import CheckoutPage from "./pages/CheckoutPage";
 
 export default function App() {
   const ctx = useAuth();
@@ -26,11 +27,11 @@ export default function App() {
       <Toaster />
       <Header />
       <Routes>
-        <Route path={"/about"} element={<AboutUsPage />}></Route>
+        <Route path={"/about"} element={<AboutMePage />}></Route>
         <Route path={"/"} element={<InitPage />}></Route>
         <Route path={"/store"} element={<ItemsPage />}></Route>
         <Route path={"/cart"} element={<Cart />}></Route>
-
+        <Route path={"/checkout"} element={<CheckoutPage />}></Route>
         <Route path={"/passion-music"} element={<Music />}></Route>
         <Route path={"/passion-acting"} element={<Acting />}></Route>
         <Route path={"/passion-Coding"} element={<Coding />}></Route>

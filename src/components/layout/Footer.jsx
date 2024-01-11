@@ -13,7 +13,7 @@ export default function Footer() {
       <footer className="container">
         <div className={css.footer}>
           <div className={css.sideLine}>
-            <h4 className={css.footerTitle}>About us</h4>
+            <h4 className={css.footerTitle}>About Me</h4>
             <div className={css.footerListSection}>
               <NavLink to="course-htmlandcss">HTML and CSS</NavLink>
               <NavLink to="course-git">Git</NavLink>
