@@ -27,10 +27,8 @@
 }
 
 .usedToolsGridSection {
-  display: grid;
   padding: 10%;
-  grid-template-columns: 1fr 1.5fr;
-  gap: 50px;
+
   position: relative;
   overflow: hidden;
 }
@@ -46,6 +44,14 @@
   background-size: cover;
   opacity: 0.2;
   z-index: -1;
+}
+
+.usedToolsField {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .usedToolsFieldLeft {
@@ -105,11 +111,8 @@
     font-size: 30px;
   }
 
-  .usedToolsGridSection {
+  .usedToolsField {
     grid-template-columns: repeat(1, 1fr);
-  }
-
-  .usedToolsGridSection::before {
   }
 
   .usedToolsFieldLeft {
