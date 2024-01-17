@@ -26,7 +26,7 @@ export default function AboutMePage() {
                 <h4 className={css.hashTitle}>Education</h4>
                 <p>
                   Dual-degree holder in Business(Mykolas Romeris University) and
-                  Musical Theater(Vilnius College) with a passion for creativity
+                  Musical Theatre(Vilnius College) with a passion for creativity
                   and technology.
                 </p>
               </div>
