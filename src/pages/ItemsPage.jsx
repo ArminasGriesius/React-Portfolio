@@ -114,8 +114,6 @@ export default function ItemsPage() {
 
   useEffect(() => {
     getItemsFromFirebase();
-    console.log("localItemsArr ===", localItemsArr);
-    console.log("sortedItems ===", sortedItems);
   }, []);
   return (
     <div className={css.itemsPageContainer}>
