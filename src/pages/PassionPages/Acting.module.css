@@ -133,7 +133,7 @@
 }
 
 .imaginacijusTitle::after {
-  content: "Imaginacijaus Theater" !important;
+  content: "Imaginacijaus Theatre" !important;
   position: absolute;
   z-index: -1;
   top: 0;

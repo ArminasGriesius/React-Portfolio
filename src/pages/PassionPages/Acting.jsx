@@ -76,16 +76,16 @@ export default function Acting() {
             alt="Arminas"
           />
           <div className={css.aboutActingTopRight}>
-            <h2 className={css.aboutActingSectionTitle}>Musical Theater</h2>
+            <h2 className={css.aboutActingSectionTitle}>Musical Theatre</h2>
 
             <p>
-              As a Musical Theater Bachelor's degree holder, I've merged my two
-              greatest passions—music and acting. In musical theater, I not only
+              As a Musical Theatre Bachelor's degree holder, I've merged my two
+              greatest passions—music and acting. In musical theatre, I not only
               portray characters but also handle singing roles. While initially
               viewing myself more as an instrumentalist than a singer, this
               challenge proved to be a driving force for personal and creative
               growth. It significantly expanded my creative thinking, a skill I
-              now apply beyond just music and theater.
+              now apply beyond just music and theatre.
             </p>
             <div className={css.aboutActingHash}>
               <h3 className={css.hashtag}>#</h3>
@@ -101,9 +101,9 @@ export default function Acting() {
             <div className={css.aboutActingHash}>
               <h3 className={css.hashtag}>#</h3>
               <div>
-                <h4 className={css.hashTitle}>"Imaginacijaus Theater"</h4>
+                <h4 className={css.hashTitle}>"Imaginacijaus Theatre"</h4>
                 <p>
-                  A theater oriented for kids in which I play a number of roles
+                  A theatre oriented for kids in which I play a number of roles
                   and also produce music for the plays and audiotales.
                 </p>
               </div>
@@ -140,7 +140,7 @@ export default function Acting() {
               alt="Play for kids"
             />
             <p className={css.sliderImgText}>
-              "Imaginacijaus Theater" play for kids
+              "Imaginacijaus Theatre" play for kids
             </p>
           </div>
           <div>
@@ -162,7 +162,7 @@ export default function Acting() {
         </Slider>
       </section>
       <section className={css.actingContainer}>
-        <h2 className={css.imaginacijusTitle}>Imaginacijaus Theater</h2>
+        <h2 className={css.imaginacijusTitle}>Imaginacijaus Theatre</h2>
 
         <div className={css.imaginacijusSpotifyLink}>
           <div className={css.aboutActingTopLeft}>
